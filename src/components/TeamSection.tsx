@@ -9,7 +9,7 @@ const TeamSection = () => {
       name: "Arturo Pinzón",
       specialty: "Arquitecto de Soluciones en Conectividad y Software",
       bio: "Experto en diseñar infraestructuras robustas y escalables.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+      image: "/Arturo Pinzon.png"
     },
     {
       name: "Marypaz Santín",
@@ -105,29 +105,19 @@ const TeamSection = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {teamMembers.map((member, index) => (
-            <Card 
-              key={index} 
-              className="group border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm overflow-hidden"
-            >
-              <CardHeader className="text-center pb-6">
-                <div className="w-28 h-28 mx-auto mb-6 overflow-hidden rounded-full ring-4 ring-accent-bluePale/20 group-hover:ring-accent-mainBlue/40 transition-all duration-300 shadow-md">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
-                  {member.name}
-                </CardTitle>
-                <CardDescription className="text-[18px] font-semibold text-accent-mainBlue leading-snug">
-                  {member.specialty}
-                </CardDescription>
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-48 object-cover rounded-t-lg"
+                  style={{ objectPosition: 'top' }}
+                />
               </CardHeader>
               <CardContent>
-                <p className="text-[16px] text-secondary-gray leading-relaxed text-center">
-                  {member.bio}
-                </p>
+                <CardTitle className="text-xl font-semibold">{member.name}</CardTitle>
+                <CardDescription className="text-sm text-gray-600">{member.specialty}</CardDescription>
+                <p className="text-gray-500 mt-2">{member.bio}</p>
               </CardContent>
             </Card>
           ))}
