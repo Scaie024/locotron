@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importa los estilos personalizados si existen */
+@import "../App.css";

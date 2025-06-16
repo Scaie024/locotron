@@ -1,14 +1,6 @@
-
 import React from 'react';
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import MethodologySection from '@/components/MethodologySection';
-import TechStackSection from '@/components/TechStackSection';
-import TeamSection from '@/components/TeamSection';
-import ProjectSection from '@/components/ProjectSection';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
+import { Navigation, Footer } from '@/components/layout';
+import { HeroSection, ServicesSection, TeamSection, ProjectSection, TechStackSection, MethodologySection, ContactSection } from '@/components/sections';
 
 const Index = () => {
   return (
