@@ -39,37 +39,37 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="servicios" className="py-24 lg:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-h2 text-primary-text mb-6">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-h1 md:text-display lg:text-[88px] text-primary-text mb-8 font-black leading-none text-balance">
             ¿Qué Hacemos por Ti?
           </h2>
-          <p className="text-body text-secondary-text max-w-3xl mx-auto">
+          <p className="text-body-xl md:text-subtitle lg:text-[22px] text-secondary-text max-w-4xl mx-auto leading-relaxed text-balance">
             Nuestros servicios están diseñados para transformar tu empresa desde dentro, 
             optimizando cada proceso y maximizando el impacto tecnológico.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-none shadow-lg bg-gradient-to-br from-white to-orange-50/30"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-none shadow-lg bg-gradient-to-br from-white to-orange-50/30 rounded-3xl overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-orange to-accent-orange-hover rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="h-8 w-8 text-white" />
+              <CardHeader className="text-center pb-6 pt-8">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-accent-orange to-accent-orange-hover rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-xl">
+                  <service.icon className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-h3 text-primary-text mb-2">
+                <CardTitle className="text-h4 md:text-h3 lg:text-[28px] text-primary-text mb-4 font-bold leading-tight text-balance">
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-body text-secondary-text leading-relaxed">
+              <CardContent className="px-8 pb-8">
+                <CardDescription className="text-body md:text-body-lg lg:text-[17px] text-secondary-text leading-relaxed text-balance">
                   {service.description}
                 </CardDescription>
               </CardContent>
@@ -80,7 +80,7 @@ const ServicesSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Button 
-            className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button px-8 py-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button-lg md:text-button-xl px-12 py-6 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 font-bold"
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Solicita un Diagnóstico Gratuito

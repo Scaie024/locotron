@@ -15,22 +15,22 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-separator">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-lg z-50 border-b border-separator shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-black text-accent-orange">scAIe</span>
+            <span className="text-h3 md:text-h2 lg:text-[40px] font-black text-accent-orange tracking-tight">scAIe</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-10">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-primary-text hover:text-accent-orange transition-colors duration-200 font-medium"
+                  className="text-body-lg md:text-body-xl lg:text-[18px] text-primary-text hover:text-accent-orange transition-colors duration-300 font-medium hover:scale-105 transform"
                 >
                   {item.name}
                 </a>
@@ -41,7 +41,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button px-6 py-3 rounded-xl transition-all duration-200"
+              className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button md:text-button-lg px-8 py-4 rounded-2xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
               onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Consultoría Gratuita
@@ -52,9 +52,9 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-primary-text hover:text-accent-orange transition-colors duration-200"
+              className="text-primary-text hover:text-accent-orange transition-colors duration-300 p-2"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -62,12 +62,12 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-separator">
+            <div className="px-4 pt-4 pb-6 space-y-4 bg-white border-t border-separator rounded-b-2xl shadow-xl">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-primary-text hover:text-accent-orange transition-colors duration-200 font-medium"
+                  className="block px-4 py-3 text-body-lg text-primary-text hover:text-accent-orange transition-colors duration-300 font-medium hover:bg-orange-50/50 rounded-xl"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -75,7 +75,7 @@ const Navigation = () => {
               ))}
               <div className="pt-4">
                 <Button 
-                  className="w-full bg-accent-orange hover:bg-accent-orange-hover text-white text-button py-3 rounded-xl"
+                  className="w-full bg-accent-orange hover:bg-accent-orange-hover text-white text-button-lg py-4 rounded-xl font-semibold shadow-lg"
                   onClick={() => {
                     setIsMenuOpen(false);
                     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
