@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,12 +14,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-lg z-50 border-b border-separator shadow-sm">
+    <nav className="fixed top-0 w-full bg-primary-black z-50 border-b border-gray-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-h3 md:text-h2 lg:text-[40px] font-black text-accent-orange tracking-tight">scAIe</span>
+            <span className="text-h3 md:text-h2 lg:text-[40px] font-black text-primary-neutral tracking-tight">scAIe</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -30,7 +29,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-body-lg md:text-body-xl lg:text-[18px] text-primary-text hover:text-accent-orange transition-colors duration-300 font-medium hover:scale-105 transform"
+                  className="text-body-lg md:text-body-xl lg:text-[18px] text-white hover:text-accent-mainBlue transition-colors duration-300 font-medium hover:scale-105 transform"
                 >
                   {item.name}
                 </a>
@@ -41,8 +40,8 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button md:text-button-lg px-8 py-4 rounded-2xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
-              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-primary text-button-xl px-12 py-6 rounded-3xl"
+              onClick={() => window.open('https://calendly.com/scaie-empresa/30min', '_blank')}
             >
               Consultoría Gratuita
             </Button>
@@ -52,7 +51,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-primary-text hover:text-accent-orange transition-colors duration-300 p-2"
+              className="text-white hover:text-accent-mainBlue transition-colors duration-300 p-2"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -62,12 +61,12 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-4 bg-white border-t border-separator rounded-b-2xl shadow-xl">
+            <div className="px-4 pt-4 pb-6 space-y-4 bg-primary-black border-t border-gray-800 rounded-b-2xl shadow-xl">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-body-lg text-primary-text hover:text-accent-orange transition-colors duration-300 font-medium hover:bg-orange-50/50 rounded-xl"
+                  className="block px-4 py-3 text-body-lg text-white hover:text-accent-mainBlue transition-colors duration-300 font-medium hover:bg-gray-800 rounded-xl"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -75,10 +74,10 @@ const Navigation = () => {
               ))}
               <div className="pt-4">
                 <Button 
-                  className="w-full bg-accent-orange hover:bg-accent-orange-hover text-white text-button-lg py-4 rounded-xl font-semibold shadow-lg"
+                  className="btn-primary w-full text-button-lg py-6 rounded-3xl"
                   onClick={() => {
                     setIsMenuOpen(false);
-                    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                    window.open('https://calendly.com/scaie-empresa/30min', '_blank');
                   }}
                 >
                   Consultoría Gratuita

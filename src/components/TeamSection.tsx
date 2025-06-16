@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { CheckCircle } from 'lucide-react';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -49,45 +49,83 @@ const TeamSection = () => {
     }
   ];
 
+  const values = [
+    {
+      icon: CheckCircle,
+      title: "Excelencia",
+      description: "Comprometidos con la calidad superior en cada proyecto, superando expectativas y garantizando resultados excepcionales. Buscamos la perfección en cada detalle y proceso.",
+      color: "from-accent-mainBlue to-blue-500"
+    },
+    {
+      icon: CheckCircle,
+      title: "Innovación",
+      description: "Siempre a la vanguardia, buscando soluciones creativas y efectivas que impulsen el crecimiento y la transformación digital de nuestros clientes. Adaptación constante a nuevas tecnologías.",
+      color: "from-accent-green to-green-600"
+    },
+    {
+      icon: CheckCircle,
+      title: "Transparencia",
+      description: "Comunicación clara, honesta y abierta en todo momento. Creemos en construir relaciones de confianza basadas en la sinceridad y la integridad. Sin letra pequeña.",
+      color: "from-accent-blue to-blue-600"
+    },
+    {
+      icon: CheckCircle,
+      title: "Compromiso",
+      description: "Dedicación total a los objetivos de nuestros clientes. Nos involucramos activamente para asegurar el éxito y la satisfacción a largo plazo, viendo sus metas como nuestras.",
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      icon: CheckCircle,
+      title: "Adaptabilidad",
+      description: "Flexibilidad para ajustarnos a las necesidades cambiantes del mercado y de cada cliente, ofreciendo soluciones ágiles y personalizadas que se ajusten a su evolución. Capacidad de respuesta.",
+      color: "from-pink-500 to-pink-600"
+    },
+    {
+      icon: CheckCircle,
+      title: "Impacto",
+      description: "Nos enfocamos en generar un valor medible y significativo para tu negocio, transformando desafíos en oportunidades de crecimiento y optimización. Resultados tangibles y duraderos.",
+      color: "from-accent-mainBlue to-blue-500"
+    }
+  ];
+
   return (
-    <section id="equipo" className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-orange-50/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="equipo" className="py-24 lg:py-36 bg-primary-neutral">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-h2 text-primary-text mb-6">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-8 font-black tracking-tight">
             El Valor Humano Detrás de scAIe
           </h2>
-          <p className="text-body text-secondary-text max-w-3xl mx-auto">
+          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto leading-relaxed">
             Nuestro equipo multidisciplinario combina experiencia técnica con visión estratégica 
             para transformar tu empresa desde múltiples perspectivas.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {teamMembers.map((member, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-none shadow-lg overflow-hidden"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm overflow-hidden"
             >
-              <CardHeader className="text-center pb-4">
-                <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full ring-4 ring-accent-orange/20 group-hover:ring-accent-orange/40 transition-all duration-300">
+              <CardHeader className="text-center pb-6">
+                <div className="w-28 h-28 mx-auto mb-6 overflow-hidden rounded-full ring-4 ring-accent-bluePale/20 group-hover:ring-accent-mainBlue/40 transition-all duration-300 shadow-md">
                   <img 
                     src={member.image} 
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <CardTitle className="text-h3 text-primary-text mb-2">
+                <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
                   {member.name}
                 </CardTitle>
-                <CardDescription className="text-sm font-semibold text-accent-orange mb-2">
+                <CardDescription className="text-[18px] font-semibold text-accent-mainBlue leading-snug">
                   {member.specialty}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-body text-secondary-text leading-relaxed text-center">
+                <p className="text-[16px] text-secondary-gray leading-relaxed text-center">
                   {member.bio}
                 </p>
               </CardContent>
@@ -95,43 +133,46 @@ const TeamSection = () => {
           ))}
         </div>
 
-        {/* Team Values */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-h3 text-primary-text mb-4">
-              Nuestros Valores
+        {/* Our Values Section */}
+        <div className="rounded-3xl p-12 lg:p-16 mb-20 bg-gradient-to-br from-primary-black/5 to-primary-black/10 backdrop-blur-sm shadow-xl">
+          <div className="text-center mb-16">
+            <h3 className="text-[40px] md:text-[48px] text-primary-black mb-6 font-black tracking-tight">
+              Nuestros Pilares Fundamentales
             </h3>
+            <p className="text-[20px] text-secondary-gray max-w-3xl mx-auto leading-relaxed">
+              Guiamos cada acción y decisión por un conjunto de principios sólidos 
+              que definen nuestra identidad y nuestro compromiso con tu éxito.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                <span className="text-white font-black text-xl">E</span>
-              </div>
-              <h4 className="text-lg font-semibold text-primary-text mb-2">Excelencia</h4>
-              <p className="text-secondary-text">Comprometidos con la calidad en cada proyecto</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center">
-                <span className="text-white font-black text-xl">I</span>
-              </div>
-              <h4 className="text-lg font-semibold text-primary-text mb-2">Innovación</h4>
-              <p className="text-secondary-text">Siempre buscando soluciones creativas y efectivas</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-orange to-red-500 rounded-2xl flex items-center justify-center">
-                <span className="text-white font-black text-xl">T</span>
-              </div>
-              <h4 className="text-lg font-semibold text-primary-text mb-2">Transparencia</h4>
-              <p className="text-secondary-text">Comunicación clara y honesta en todo momento</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {values.map((value, index) => (
+              <Card 
+                key={index} 
+                className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm text-center p-8 flex flex-col items-center justify-center"
+              >
+                <CardHeader className="pb-6 flex flex-col items-center">
+                  <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${value.color} rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                    <value.icon className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-[26px] text-primary-black font-bold mb-3">
+                    {value.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow flex items-start">
+                  <p className="text-[16px] text-secondary-gray leading-relaxed text-justify">
+                    {value.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center">
           <Button 
-            className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button px-8 py-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-primary text-[20px] px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => window.open('https://calendly.com/scaie-empresa/30min', '_blank')}
           >
             Conoce a Todo el Equipo scAIe
           </Button>

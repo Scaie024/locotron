@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { CheckCircle, Clock, FileText, BarChart3, Shield, Users } from 'lucide-react';
+import { Clock, CheckCircle, Shield, Cloud, BarChart3, Users, Gauge, Workflow, Building2, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -41,121 +40,171 @@ const ProjectSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 lg:py-32 bg-primary-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-h2 text-primary-text mb-6">
-            Transparencia y Resultados: 
-            <br />
-            <span className="text-accent-orange">Así Funciona tu Proyecto con scAIe</span>
+          <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-6 font-black">
+            <span className="text-accent-mainBlue">Así Funciona tu Proyecto con scAIe</span>
           </h2>
-          <p className="text-body text-secondary-text max-w-3xl mx-auto">
-            Clarificamos cada etapa del proceso, duración y beneficios tangibles que recibirás.
+          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto">
+            Un proceso claro y transparente desde la concepción hasta el lanzamiento.
           </p>
         </div>
 
-        {/* Project Timeline */}
-        <div className="mb-16">
-          <Card className="border-none shadow-xl bg-gradient-to-br from-white to-orange-50/30">
-            <CardHeader className="text-center">
-              <CardTitle className="text-h3 text-primary-text flex items-center justify-center gap-3">
-                <Clock className="h-8 w-8 text-accent-orange" />
-                Duración del Proyecto
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <div className="bg-white rounded-xl p-6 shadow-lg inline-block">
-                <p className="text-body text-primary-text leading-relaxed">
-                  <span className="font-bold text-accent-orange text-2xl">3 meses</span> de ejecución intensiva 
-                  <br />
-                  <span className="text-secondary-text">+</span>
-                  <br />
-                  <span className="font-bold text-accent-orange text-2xl">1 mes</span> de soporte post-venta
-                  <br />
-                  <span className="text-sm text-secondary-text mt-2 block">para asegurar tu éxito continuo</span>
-                </p>
+        {/* Project Process */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Timeline */} 
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-accent-mainBlue to-accent-mainBlue/20 h-full hidden md:block"></div>
+            <div className="space-y-12">
+              {/* Fase 1: Diagnóstico y Estrategia */}
+              <div className="flex items-start md:justify-end md:pr-16 relative">
+                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
+                  <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
+                    Fase 1: Diagnóstico y Estrategia
+                  </CardTitle>
+                  <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
+                    Realizamos un análisis exhaustivo de tu negocio, procesos y objetivos. Definimos una estrategia clara y un roadmap tecnológico.
+                  </CardDescription>
+                </Card>
               </div>
-            </CardContent>
-          </Card>
+
+              {/* Fase 2: Diseño y Prototipado */}
+              <div className="flex items-start md:justify-start md:pl-16 relative">
+                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
+                  <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
+                    Fase 2: Diseño y Prototipado
+                  </CardTitle>
+                  <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
+                    Creamos wireframes, maquetas y prototipos interactivos para visualizar la solución antes del desarrollo.
+                  </CardDescription>
+                </Card>
+              </div>
+
+              {/* Fase 3: Desarrollo Ágil */}
+              <div className="flex items-start md:justify-end md:pr-16 relative">
+                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
+                  <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
+                    Fase 3: Desarrollo Ágil
+                  </CardTitle>
+                  <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
+                    Construimos tu solución en iteraciones cortas, con entregas continuas y feedback constante.
+                  </CardDescription>
+                </Card>
+              </div>
+
+              {/* Fase 4: Implementación y Soporte */}
+              <div className="flex items-start md:justify-start md:pl-16 relative">
+                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
+                  <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
+                    Fase 4: Implementación y Soporte
+                  </CardTitle>
+                  <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
+                    Desplegamos la solución en tu entorno y ofrecemos soporte post-lanzamiento para asegurar su óptimo funcionamiento.
+                  </CardDescription>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Metrics / Visuals */}
+          <div className="flex flex-col justify-center items-center p-8 rounded-3xl bg-gradient-to-br from-accent-mainBlue/5 to-accent-mainBlue/10 shadow-xl backdrop-blur-sm">
+            <Clock className="h-16 w-16 text-accent-mainBlue mb-6" />
+            <p className="text-[24px] text-primary-black mb-4 font-semibold text-center">
+              Tiempo de Ejecución Típico:
+            </p>
+            <p className="text-[48px] font-bold text-accent-mainBlue mb-8 text-center">
+              3 meses
+            </p>
+            <p className="text-[20px] text-primary-black mb-4 font-semibold text-center">
+              Soporte Post-Lanzamiento:
+            </p>
+            <p className="text-[36px] font-bold text-accent-mainBlue text-center">
+              1 mes
+            </p>
+          </div>
         </div>
 
-        {/* Deliverables */}
+        {/* Deliverables Section */}
         <div className="mb-16">
-          <h3 className="text-h3 text-primary-text text-center mb-8">
-            Nuestros Entregables Clave (Visibles y Tangibles)
+          <h3 className="text-[40px] md:text-[48px] text-primary-black mb-10 font-black text-center tracking-tight">
+            Resultados Tangibles para tu Negocio
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {deliverables.map((deliverable, index) => (
-              <Card 
-                key={index}
-                className="group hover:shadow-lg transition-all duration-300 border-l-4 border-accent-orange"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[ 
+              { icon: CheckCircle, name: "Plataformas Optimizadas" },
+              { icon: Shield, name: "Seguridad Robusta" },
+              { icon: Cloud, name: "Infraestructura Escalable" },
+              { icon: BarChart3, name: "Reportes y Analíticas" },
+              { icon: Users, name: "Equipos Capacitados" },
+              { icon: Gauge, name: "Eficiencia Operativa" },
+            ].map((deliverable, index) => (
+              <div 
+                key={index} 
+                className="flex items-center space-x-4 p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-md border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               >
-                <CardHeader className="pb-3">
-                  <div className="flex items-center gap-3 mb-2">
-                    <deliverable.icon className="h-6 w-6 text-accent-orange" />
-                    <CardTitle className="text-lg text-primary-text">
-                      {deliverable.title}
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-secondary-text">
-                    {deliverable.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                <div className="w-12 h-12 rounded-full bg-accent-mainBlue/10 flex items-center justify-center flex-shrink-0">
+                  <deliverable.icon className="h-6 w-6 text-accent-mainBlue" />
+                </div>
+                <span className="text-[18px] font-semibold text-primary-black">{deliverable.name}</span>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Methodology */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <Card className="border-none shadow-xl">
-            <CardHeader>
-              <CardTitle className="text-h3 text-primary-text">
-                Metodología Híbrida
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-body text-secondary-text leading-relaxed">
-                Combinamos la <span className="font-semibold text-accent-orange">metodología en cascada</span> para 
-                un diagnóstico exhaustivo y la <span className="font-semibold text-accent-orange">agilidad</span> para 
-                una implementación eficiente y adaptativa.
-              </p>
-            </CardContent>
-          </Card>
+        {/* Methodology and Approach */}
+        <div className="bg-gradient-to-r from-accent-mainBlue/5 to-accent-mainBlue/10 rounded-3xl p-16 mb-20 backdrop-blur-sm shadow-xl">
+          <div className="text-center max-w-4xl mx-auto">
+            <h3 className="text-[36px] text-primary-black mb-8 font-bold tracking-tight">
+              Enfoque Metodológico Híbrido
+            </h3>
+            <p className="text-[18px] text-secondary-gray leading-relaxed">
+              Combinamos la <span className="font-semibold text-accent-mainBlue">metodología en cascada</span> para
+              un diagnóstico exhaustivo y la <span className="font-semibold text-accent-mainBlue">agilidad</span> para
+              la implementación. Este enfoque híbrido nos permite ser precisos en la planificación y flexibles
+              en la ejecución, garantizando que tu proyecto se adapte a tus necesidades cambiantes y se entregue
+              con la máxima calidad y eficiencia.
+            </p>
+          </div>
+        </div>
 
-          <Card className="border-none shadow-xl">
-            <CardHeader>
-              <CardTitle className="text-h3 text-primary-text flex items-center gap-3">
-                <Shield className="h-7 w-7 text-accent-orange" />
-                Normativas Integradas
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-body text-secondary-text leading-relaxed mb-4">
-                Nuestros proyectos incorporan naturalmente estándares robustos y seguros:
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {standards.map((standard, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-3">
-                    <div className="font-semibold text-accent-orange text-sm">{standard.name}</div>
-                    <div className="text-xs text-secondary-text">{standard.focus}</div>
-                  </div>
-                ))}
+        {/* Compliance Standards */}
+        <div className="mb-16">
+          <h3 className="text-[40px] md:text-[48px] text-primary-black mb-10 font-black text-center tracking-tight">
+            Compromiso con Estándares de Calidad
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[ 
+              { name: "ISO 27001", icon: Shield, description: "Seguridad de la información" },
+              { name: "ITIL", icon: Workflow, description: "Gestión de servicios IT" },
+              { name: "PMI (PMBOK)", icon: Building2, description: "Gestión de proyectos" },
+            ].map((standard, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-md border border-gray-200 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <div className="w-16 h-16 rounded-full bg-accent-mainBlue/10 flex items-center justify-center mb-4">
+                  <standard.icon className="h-8 w-8 text-accent-mainBlue" />
+                </div>
+                <h4 className="text-[22px] font-bold text-primary-black mb-2">{standard.name}</h4>
+                <p className="text-[16px] text-secondary-gray">{standard.description}</p>
               </div>
-            </CardContent>
-          </Card>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
         <div className="text-center">
           <Button 
-            className="bg-accent-orange hover:bg-accent-orange-hover text-white text-button px-8 py-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-primary text-[20px] px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => window.open('https://calendly.com/scaie-empresa/30min', '_blank')}
           >
-            Solicita una Propuesta Detallada y Personalizada
+            Agenda una Consulta para tu Proyecto
           </Button>
         </div>
       </div>
