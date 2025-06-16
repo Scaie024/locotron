@@ -1,5 +1,4 @@
 @import "./styles/index.css";
-@import "./styles/App.css";
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 @layer base {
