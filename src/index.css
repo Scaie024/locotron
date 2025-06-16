@@ -92,6 +92,23 @@
   }
 
   body {
-    @apply bg-primary-bg text-primary-text font-archivo;
+    @apply bg-gray-100 text-gray-900 font-archivo;
+    font-weight: 400;
+  }
+
+  /* Estilos base para títulos siguiendo la línea gráfica */
+  h1 {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-weight: 600;
+    letter-spacing: -0.005em;
   }
 }
