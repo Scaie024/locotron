@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -98,6 +92,33 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-primary-bg text-primary-text font-archivo;
+  }
+}
+
+/* Custom utility classes for scAIe */
+@layer utilities {
+  .text-h1 {
+    @apply text-h1 font-archivo;
+  }
+  
+  .text-h2 {
+    @apply text-h2 font-archivo;
+  }
+  
+  .text-h3 {
+    @apply text-h3 font-archivo;
+  }
+  
+  .text-body {
+    @apply text-body font-archivo;
+  }
+  
+  .text-button {
+    @apply text-button font-archivo uppercase;
+  }
+  
+  .text-legal {
+    @apply text-legal font-archivo;
   }
 }
