@@ -8,32 +8,32 @@ const ServicesSection = () => {
     {
       icon: Settings,
       title: "Automatización Inteligente",
-      description: "Automatizamos tus procesos más importantes para eliminar tareas repetitivas, reducir errores y aumentar la productividad de tu equipo."
+      description: "Elimina tareas repetitivas y aumenta la productividad."
     },
     {
       icon: BarChart3,
       title: "Análisis de Datos",
-      description: "Convertimos tus datos en información valiosa con dashboards interactivos que te ayudan a tomar mejores decisiones de negocio."
+      description: "Toma mejores decisiones con nuestros dashboards interactivos."
     },
     {
       icon: Code,
       title: "Soluciones Tecnológicas",
-      description: "Desarrollamos e implementamos sistemas personalizados que se adaptan a tus necesidades específicas y crecen con tu negocio."
+      description: "Sistemas personalizados que se adaptan a tus necesidades."
     },
     {
       icon: Lightbulb,
       title: "Productos Digitales",
-      description: "Creamos prototipos y productos mínimos viables que te permiten validar ideas rápidamente y lanzar al mercado con confianza."
+      description: "Valida ideas rápidamente con prototipos y MVPs."
     },
     {
       icon: Users,
       title: "Capacitación & Soporte",
-      description: "Entrenamos a tu equipo en el uso de nuevas tecnologías y brindamos soporte continuo para asegurar el éxito de la implementación."
+      description: "Entrenamos y brindamos soporte a tu equipo."
     },
     {
       icon: MapPin,
       title: "Planificación Estratégica",
-      description: "Desarrollamos un plan tecnológico personalizado que identifica oportunidades de mejora y establece objetivos claros para tu empresa."
+      description: "Identificamos oportunidades y establecemos objetivos claros."
     }
   ];
 
@@ -45,9 +45,6 @@ const ServicesSection = () => {
           <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-6 font-black">
             Servicios que Transforman
           </h2>
-          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto">
-            Soluciones tecnológicas personalizadas que impulsan la eficiencia y el crecimiento de tu empresa.
-          </p>
         </div>
 
         {/* Services Grid */}

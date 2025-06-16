@@ -8,7 +8,7 @@ const TechStackSection = () => {
     {
       icon: Code,
       title: "Desarrollo",
-      description: "Frameworks y lenguajes modernos para crear soluciones robustas y escalables que impulsan la innovación digital.",
+      description: "Frameworks y lenguajes modernos para crear soluciones robustas y escalables.",
       technologies: [
         "React", "Next.js", "TypeScript", "Python", "Node.js", "Django",
         "FastAPI", "Flutter", "React Native", "Vue.js", "Angular"
@@ -17,7 +17,7 @@ const TechStackSection = () => {
     {
       icon: Database,
       title: "Bases de Datos",
-      description: "Sistemas de almacenamiento y gestión de datos optimizados para cualquier escala de operación y rendimiento.",
+      description: "Sistemas de almacenamiento y gestión de datos optimizados para cualquier escala.",
       technologies: [
         "PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch",
         "Supabase", "Firebase", "DynamoDB", "Cassandra", "Neo4j"
@@ -26,7 +26,7 @@ const TechStackSection = () => {
     {
       icon: Cloud,
       title: "Cloud & DevOps",
-      description: "Infraestructura y herramientas de última generación para despliegue y operación eficiente en la nube.",
+      description: "Infraestructura y herramientas para despliegue y operación eficiente en la nube.",
       technologies: [
         "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes",
         "Terraform", "Jenkins", "GitHub Actions", "Ansible", "Prometheus"
@@ -35,7 +35,7 @@ const TechStackSection = () => {
     {
       icon: Cpu,
       title: "Inteligencia Artificial",
-      description: "Frameworks y herramientas avanzadas para implementar soluciones inteligentes que transforman tu negocio.",
+      description: "Frameworks y herramientas avanzadas para implementar soluciones inteligentes.",
       technologies: [
         "TensorFlow", "PyTorch", "Scikit-learn", "OpenAI", "Hugging Face",
         "LangChain", "Pandas", "NumPy", "SpaCy", "NLTK"
@@ -44,7 +44,7 @@ const TechStackSection = () => {
     {
       icon: Server,
       title: "Backend & APIs",
-      description: "Herramientas robustas para construir APIs y servicios backend que garantizan la escalabilidad y seguridad.",
+      description: "Herramientas para construir APIs y servicios backend que garantizan escalabilidad y seguridad.",
       technologies: [
         "REST", "GraphQL", "gRPC", "WebSocket", "RabbitMQ",
         "Kafka", "Redis", "Nginx", "Apache", "Express"
@@ -53,7 +53,7 @@ const TechStackSection = () => {
     {
       icon: Workflow,
       title: "Automatización",
-      description: "Plataformas inteligentes para automatizar procesos y flujos de trabajo, maximizando la eficiencia operativa.",
+      description: "Plataformas para automatizar procesos y flujos de trabajo, maximizando la eficiencia operativa.",
       technologies: [
         "n8n", "Zapier", "Make", "Airflow", "Prefect",
         "Power Automate", "IFTTT", "Automate.io", "Integromat", "Pipedream"
