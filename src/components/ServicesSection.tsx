@@ -104,49 +104,49 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 lg:py-32 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
+    <section id="servicios" className="py-16 lg:py-24 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-7xl font-black mb-8 text-primary-black leading-tight">
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-primary-black leading-tight">
             <span className="block">Servicios OPT</span>
             <span className="block" style={{ color: '#D2AA52' }}>que transforman</span>
           </h2>
-          <p className="text-2xl md:text-3xl font-semibold text-secondary-gray mb-10 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl font-semibold text-secondary-gray mb-8 max-w-3xl mx-auto">
             <span className="font-bold text-primary-black">Organización, Procesos y Tecnología</span> aplicados a cada servicio.
           </p>
         </div>
 
         {/* OPT Methodology Overview */}
-        <div className="mb-20">
-          <h3 className="text-3xl md:text-4xl font-bold text-center text-primary-black mb-12">
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-primary-black mb-10">
             Nuestros Servicios por Metodología OPT
           </h3>
           
           {/* Organización */}
-          <div className="mb-16">
-            <div className="flex items-center mb-8">
-              <div className="w-16 h-16 rounded-full bg-opt-organizacion flex items-center justify-center mr-6">
-                <Building2 className="h-8 w-8 text-white" />
+          <div className="mb-12">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-opt-organizacion flex items-center justify-center mr-4">
+                <Building2 className="h-6 w-6 text-white" />
               </div>
-              <h4 className="text-2xl md:text-3xl font-bold text-primary-black">Organización</h4>
+              <h4 className="text-xl md:text-2xl font-bold text-primary-black">Organización</h4>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {optServices.organizacion.map((service, index) => (
                 <Card 
                   key={index} 
                   className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
-                  <CardHeader className="pb-6">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${service.color}`}>
-                      <service.icon className="h-8 w-8" style={{ color: service.textColor === 'text-white' ? 'white' : '#374151' }} />
+                  <CardHeader className="pb-4">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 ${service.color}`}>
+                      <service.icon className="h-6 w-6" style={{ color: service.textColor === 'text-white' ? 'white' : '#374151' }} />
                     </div>
-                    <CardTitle className="text-xl text-primary-black font-bold">
+                    <CardTitle className="text-lg text-primary-black font-bold">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base text-secondary-gray leading-relaxed">
+                    <CardDescription className="text-sm text-secondary-gray leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </CardContent>
@@ -156,29 +156,29 @@ const ServicesSection = () => {
           </div>
 
           {/* Procesos */}
-          <div className="mb-16">
-            <div className="flex items-center mb-8">
-              <div className="w-16 h-16 rounded-full bg-opt-procesos flex items-center justify-center mr-6">
-                <Workflow className="h-8 w-8 text-gray-800" />
+          <div className="mb-12">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-opt-procesos flex items-center justify-center mr-4">
+                <Workflow className="h-6 w-6 text-gray-800" />
               </div>
-              <h4 className="text-2xl md:text-3xl font-bold text-primary-black">Procesos</h4>
+              <h4 className="text-xl md:text-2xl font-bold text-primary-black">Procesos</h4>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {optServices.procesos.map((service, index) => (
                 <Card 
                   key={index} 
                   className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
-                  <CardHeader className="pb-6">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${service.color}`}>
-                      <service.icon className="h-8 w-8" style={{ color: '#374151' }} />
+                  <CardHeader className="pb-4">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 ${service.color}`}>
+                      <service.icon className="h-6 w-6" style={{ color: '#374151' }} />
                     </div>
-                    <CardTitle className="text-xl text-primary-black font-bold">
+                    <CardTitle className="text-lg text-primary-black font-bold">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base text-secondary-gray leading-relaxed">
+                    <CardDescription className="text-sm text-secondary-gray leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </CardContent>
@@ -188,29 +188,29 @@ const ServicesSection = () => {
           </div>
 
           {/* Tecnologías */}
-          <div className="mb-16">
-            <div className="flex items-center mb-8">
-              <div className="w-16 h-16 rounded-full bg-opt-tecnologias flex items-center justify-center mr-6">
-                <Cpu className="h-8 w-8 text-gray-800" />
+          <div className="mb-12">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-opt-tecnologias flex items-center justify-center mr-4">
+                <Cpu className="h-6 w-6 text-gray-800" />
               </div>
-              <h4 className="text-2xl md:text-3xl font-bold text-primary-black">Tecnologías</h4>
+              <h4 className="text-xl md:text-2xl font-bold text-primary-black">Tecnologías</h4>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {optServices.tecnologias.map((service, index) => (
                 <Card 
                   key={index} 
                   className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
-                  <CardHeader className="pb-6">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${service.color}`}>
-                      <service.icon className="h-8 w-8" style={{ color: '#374151' }} />
+                  <CardHeader className="pb-4">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 ${service.color}`}>
+                      <service.icon className="h-6 w-6" style={{ color: '#374151' }} />
                     </div>
-                    <CardTitle className="text-xl text-primary-black font-bold">
+                    <CardTitle className="text-lg text-primary-black font-bold">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base text-secondary-gray leading-relaxed">
+                    <CardDescription className="text-sm text-secondary-gray leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </CardContent>
@@ -221,33 +221,31 @@ const ServicesSection = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-16 mb-20 backdrop-blur-sm shadow-xl">
-          <div className="text-center mb-16">
-            <h3 className="text-[40px] md:text-[48px] text-primary-black mb-6 font-black tracking-tight">
-              ¿Por qué elegir scAIe con OPT?
-            </h3>
-            <p className="text-[20px] text-secondary-gray max-w-3xl mx-auto leading-relaxed">
-              Nuestro enfoque único combina experiencia técnica con metodología OPT probada.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="mb-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-primary-black mb-8">
+            ¿Por qué elegir nuestros servicios OPT?
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <Card 
                 key={index} 
-                className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm text-center p-8 flex flex-col items-center justify-center"
+                className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                style={{ borderLeft: `4px solid #D2AA52` }}
               >
-                <CardHeader className="pb-6 flex flex-col items-center">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 bg-opt-organizacion">
-                    <benefit.icon className="h-10 w-10 text-white" />
+                <CardHeader className="pb-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 rounded-full bg-opt-organizacion flex items-center justify-center mr-3">
+                      <benefit.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <CardTitle className="text-lg text-primary-black font-bold">
+                      {benefit.title}
+                    </CardTitle>
                   </div>
-                  <CardTitle className="text-[26px] text-primary-black font-bold mb-3">
-                    {benefit.title}
-                  </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow flex items-start">
-                  <p className="text-[16px] text-secondary-gray leading-relaxed text-justify">
+                <CardContent>
+                  <CardDescription className="text-sm text-secondary-gray leading-relaxed">
                     {benefit.description}
-                  </p>
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -256,18 +254,29 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <h3 className="text-[32px] text-primary-black mb-6 font-bold">
-            ¿Necesitas servicios con metodología OPT?
+          <h3 className="text-2xl md:text-3xl font-bold text-primary-black mb-6">
+            ¿Listo para aplicar OPT en tu empresa?
           </h3>
-          <p className="text-[18px] text-secondary-gray mb-8 max-w-2xl mx-auto">
-            Agenda una consultoría gratuita y descubre cómo podemos transformar tu empresa con OPT.
+          <p className="text-base md:text-lg text-secondary-gray mb-8 max-w-2xl mx-auto">
+            Descubre cómo nuestra metodología OPT puede transformar tu empresa y llevarte al siguiente nivel.
           </p>
-          <Link to="/contacto">
-            <button className="btn-primary text-xl px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-black" style={{ background: '#D2AA52', color: '#fff', border: 'none' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contacto"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{ background: '#D2AA52', border: 'none' }}
+            >
               Solicita tu diagnóstico OPT gratuito
-              <ArrowRight className="ml-3 h-6 w-6 inline" />
-            </button>
-          </Link>
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              to="/metodologia"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-xl border-2 transition-all duration-300"
+              style={{ borderColor: '#D2AA52', color: '#D2AA52' }}
+            >
+              Conoce nuestra metodología OPT
+            </Link>
+          </div>
         </div>
       </div>
     </section>
