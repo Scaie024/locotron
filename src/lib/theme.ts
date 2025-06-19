@@ -33,6 +33,19 @@ export const theme = {
       primary: '#000000',
       secondary: '#6b7280',
       light: '#9ca3af',
+    },
+    // Metodología OPT - Colores principales
+    opt: {
+      organizacion: '#D2AA52',    // Dorado/Oro para Organización
+      procesos: '#D2DFC3',        // Verde suave para Procesos
+      tecnologias: '#C4D8DF',     // Azul claro para Tecnologías
+      // Variaciones para diferentes usos
+      organizacionLight: '#E8C97A',
+      organizacionDark: '#B8943A',
+      procesosLight: '#E8F0D8',
+      procesosDark: '#B8C9A3',
+      tecnologiasLight: '#D8E8ED',
+      tecnologiasDark: '#A8C8D3',
     }
   },
   // Tipografía

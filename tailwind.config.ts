@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 import { theme } from "./src/lib/theme";
+import typography from '@tailwindcss/typography';
+import animate from 'tailwindcss-animate';
 
 const config = {
 	darkMode: ["class"],
@@ -89,6 +91,16 @@ const config = {
 				'text-secondary': theme.colors.text.secondary,
 				'text-light': theme.colors.text.light,
 				
+				// Metodología OPT Colors
+				'opt-organizacion': theme.colors.opt.organizacion,
+				'opt-procesos': theme.colors.opt.procesos,
+				'opt-tecnologias': theme.colors.opt.tecnologias,
+				'opt-organizacion-light': theme.colors.opt.organizacionLight,
+				'opt-organizacion-dark': theme.colors.opt.organizacionDark,
+				'opt-procesos-light': theme.colors.opt.procesosLight,
+				'opt-procesos-dark': theme.colors.opt.procesosDark,
+				'opt-tecnologias-light': theme.colors.opt.tecnologiasLight,
+				'opt-tecnologias-dark': theme.colors.opt.tecnologiasDark,
 			},
 			fontSize: {
 				'hero': ['120px', { lineHeight: '1', fontWeight: '900', letterSpacing: '-0.05em' }],
@@ -156,8 +168,8 @@ const config = {
 		}
 	},
 	plugins: [
-		require('@tailwindcss/typography'),
-		require('tailwindcss-animate'),
+		typography,
+		animate,
 	],
 } satisfies Config;
 
