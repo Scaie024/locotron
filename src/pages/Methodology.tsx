@@ -1,15 +1,12 @@
-import React from 'react';
 import { Navigation, Footer } from '@/components/layout';
-import { HeroSection } from '@/components/sections';
+import MethodologySection from '@/components/MethodologySection';
 
-const Index = () => {
+export default function MethodologyPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <HeroSection />
+      <MethodologySection />
       <Footer />
     </div>
   );
-};
-
-export default Index;
+} 

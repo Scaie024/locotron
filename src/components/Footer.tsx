@@ -1,5 +1,6 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,7 +10,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-3xl font-black text-primary-black">scAIe</span>
+              <Link to="/">
+                <span className="text-3xl font-black text-primary-black">scAIe</span>
+              </Link>
             </div>
             <p className="text-secondary-gray leading-relaxed">
               Consultoría tecnológica estratégica para transformar empresas y optimizar operaciones.
@@ -39,18 +42,18 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-primary-black mb-4">Empresa</h4>
             <div className="space-y-2">
-              <a href="#equipo" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
+              <Link to="/equipo" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
                 Nuestro Equipo
-              </a>
-              <a href="#metodologia" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
+              </Link>
+              <Link to="/metodologia" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
                 Metodología OPT
-              </a>
-              <a href="#stack" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
+              </Link>
+              <Link to="/stack" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
                 Stack Tecnológico
-              </a>
-              <a href="#proyectos" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
+              </Link>
+              <Link to="/proyectos" className="block text-secondary-gray hover:text-accent-mainBlue transition-colors">
                 Casos de Éxito
-              </a>
+              </Link>
             </div>
           </div>
 

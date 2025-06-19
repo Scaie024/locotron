@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Target, TrendingUp, Shield } from 'lucide-react';
+
+const accentGray = '#6B7280'; // Gris destacado
 
 const TeamSection = () => {
   const teamMembers = [
@@ -9,7 +11,7 @@ const TeamSection = () => {
       name: "Arturo Pinzón",
       specialty: "Arquitecto de Soluciones en Conectividad y Software",
       bio: "Experto en diseñar infraestructuras robustas y escalables.",
-      image: "/Arturo Pinzon.png"
+      image: "/Arturo Pinzon.jpg"
     },
     {
       name: "Marypaz Santín",
@@ -51,61 +53,43 @@ const TeamSection = () => {
 
   const values = [
     {
-      icon: CheckCircle,
-      title: "Excelencia",
-      description: "Comprometidos con la calidad superior en cada proyecto, superando expectativas y garantizando resultados excepcionales. Buscamos la perfección en cada detalle y proceso.",
-      color: "from-accent-mainBlue to-blue-500"
+      icon: Target,
+      title: "Enfoque",
+      description: "Nos centramos en entender profundamente tu negocio y objetivos específicos para diseñar soluciones que realmente funcionen. Cada proyecto es único y merece atención personalizada.",
+      color: `from-${accentGray} to-gray-600`
     },
     {
-      icon: CheckCircle,
-      title: "Innovación",
-      description: "Siempre a la vanguardia, buscando soluciones creativas y efectivas que impulsen el crecimiento y la transformación digital de nuestros clientes. Adaptación constante a nuevas tecnologías.",
-      color: "from-accent-green to-green-600"
-    },
-    {
-      icon: CheckCircle,
-      title: "Transparencia",
-      description: "Comunicación clara, honesta y abierta en todo momento. Creemos en construir relaciones de confianza basadas en la sinceridad y la integridad. Sin letra pequeña.",
-      color: "from-accent-blue to-blue-600"
-    },
-    {
-      icon: CheckCircle,
-      title: "Compromiso",
-      description: "Dedicación total a los objetivos de nuestros clientes. Nos involucramos activamente para asegurar el éxito y la satisfacción a largo plazo, viendo sus metas como nuestras.",
-      color: "from-purple-500 to-purple-600"
-    },
-    {
-      icon: CheckCircle,
-      title: "Adaptabilidad",
-      description: "Flexibilidad para ajustarnos a las necesidades cambiantes del mercado y de cada cliente, ofreciendo soluciones ágiles y personalizadas que se ajusten a su evolución. Capacidad de respuesta.",
-      color: "from-pink-500 to-pink-600"
-    },
-    {
-      icon: CheckCircle,
-      title: "Impacto",
+      icon: TrendingUp,
+      title: "Resultados",
       description: "Nos enfocamos en generar un valor medible y significativo para tu negocio, transformando desafíos en oportunidades de crecimiento y optimización. Resultados tangibles y duraderos.",
-      color: "from-accent-mainBlue to-blue-500"
+      color: `from-${accentGray} to-gray-600`
+    },
+    {
+      icon: Shield,
+      title: "Confianza",
+      description: "Construimos relaciones duraderas basadas en la transparencia, la comunicación clara y la entrega consistente de valor. Tu éxito es nuestro éxito.",
+      color: `from-${accentGray} to-gray-600`
     }
   ];
 
   return (
-    <section id="equipo" className="py-24 lg:py-36 bg-primary-neutral">
+    <section id="equipo" className="py-24 lg:py-36 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-8 font-black tracking-tight">
-            El Valor Humano Detrás de scAIe
+          <h2 className="text-5xl md:text-7xl font-black mb-8 text-primary-black leading-tight">
+            <span className="block">El valor humano</span>
+            <span className="block" style={{ color: accentGray }}>detrás de scAIe</span>
           </h2>
-          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto leading-relaxed">
-            Nuestro equipo multidisciplinario combina experiencia técnica con visión estratégica 
-            para transformar tu empresa desde múltiples perspectivas.
+          <p className="text-2xl md:text-3xl font-semibold text-secondary-gray mb-10 max-w-3xl mx-auto">
+            <span className="font-bold text-primary-black">Talento multidisciplinario</span> para transformar tu empresa.
           </p>
         </div>
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <img
                   src={member.image}
@@ -124,7 +108,7 @@ const TeamSection = () => {
         </div>
 
         {/* Our Values Section */}
-        <div className="rounded-3xl p-12 lg:p-16 mb-20 bg-gradient-to-br from-primary-black/5 to-primary-black/10 backdrop-blur-sm shadow-xl">
+        <div className="rounded-3xl p-12 lg:p-16 mb-20 bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-sm shadow-xl">
           <div className="text-center mb-16">
             <h3 className="text-[40px] md:text-[48px] text-primary-black mb-6 font-black tracking-tight">
               Nuestros Pilares Fundamentales
@@ -141,7 +125,7 @@ const TeamSection = () => {
                 className="group border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm text-center p-8 flex flex-col items-center justify-center"
               >
                 <CardHeader className="pb-6 flex flex-col items-center">
-                  <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${value.color} rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`} style={{ background: accentGray }}>
                     <value.icon className="h-10 w-10 text-white" />
                   </div>
                   <CardTitle className="text-[26px] text-primary-black font-bold mb-3">

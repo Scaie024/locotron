@@ -11,7 +11,8 @@ export default defineConfig({
     host: true,
     port: 3000,
     strictPort: false,
-    open: true
+    open: true,
+    cors: true
   },
   plugins: [react()],
   resolve: {
@@ -22,13 +23,33 @@ export default defineConfig({
   build: {
     sourcemap: true,
     chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tooltip']
+        }
+      }
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-tooltip',
+      'lucide-react'
+    ],
   },
   css: {
     postcss: {
       plugins: [tailwindcss(), autoprefixer()],
     },
   },
+  define: {
+    'process.env': {}
+  }
 });

@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { toast } from '@/hooks/use-toast';
 
+const accentGray = '#6B7280'; // Gris destacado
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,15 +35,16 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacto" className="py-20 lg:py-32 bg-primary-neutral">
+    <section id="contacto" className="py-20 lg:py-32 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-6 font-black">
-            Conectemos y Transformemos tu Negocio
+          <h2 className="text-5xl md:text-7xl font-black mb-8 text-primary-black leading-tight">
+            <span className="block">Conectemos</span>
+            <span className="block" style={{ color: accentGray }}>y transforma tu negocio</span>
           </h2>
-          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto">
-            Estamos listos para escuchar tus desafíos y diseñar la solución perfecta para tu empresa.
+          <p className="text-2xl md:text-3xl font-semibold text-secondary-gray mb-10 max-w-3xl mx-auto">
+            <span className="font-bold text-primary-black">Agenda tu consultoría gratuita</span> y recibe una propuesta personalizada.
           </p>
         </div>
 

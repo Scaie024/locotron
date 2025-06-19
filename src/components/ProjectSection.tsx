@@ -3,6 +3,8 @@ import { Clock, CheckCircle, Shield, Cloud, BarChart3, Users, Gauge, Workflow, B
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+const accentGray = '#6B7280'; // Gris destacado
+
 const ProjectSection = () => {
   const deliverables = [
     {
@@ -40,15 +42,16 @@ const ProjectSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-primary-neutral">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-6 font-black">
-            <span className="text-accent-mainBlue">Así Funciona tu Proyecto con scAIe</span>
+          <h2 className="text-5xl md:text-7xl font-black mb-8 text-primary-black leading-tight">
+            <span className="block">Así funciona</span>
+            <span className="block" style={{ color: accentGray }}>tu proyecto con scAIe</span>
           </h2>
-          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto">
-            Un proceso claro y transparente desde la concepción hasta el lanzamiento.
+          <p className="text-2xl md:text-3xl font-semibold text-secondary-gray mb-10 max-w-3xl mx-auto">
+            <span className="font-bold text-primary-black">Proceso claro y resultados tangibles.</span>
           </p>
         </div>
 
@@ -56,11 +59,11 @@ const ProjectSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Timeline */} 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-accent-mainBlue to-accent-mainBlue/20 h-full hidden md:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b h-full hidden md:block" style={{ background: `linear-gradient(to bottom, ${accentGray}, ${accentGray}40)` }}></div>
             <div className="space-y-12">
               {/* Fase 1: Diagnóstico y Estrategia */}
               <div className="flex items-start md:justify-end md:pr-16 relative">
-                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <div className="absolute w-6 h-6 rounded-full top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block" style={{ background: accentGray }}></div>
                 <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
                   <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
                     Fase 1: Diagnóstico y Estrategia
@@ -73,39 +76,39 @@ const ProjectSection = () => {
 
               {/* Fase 2: Diseño y Prototipado */}
               <div className="flex items-start md:justify-start md:pl-16 relative">
-                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <div className="absolute w-6 h-6 rounded-full top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block" style={{ background: accentGray }}></div>
                 <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
                   <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
                     Fase 2: Diseño y Prototipado
                   </CardTitle>
                   <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
-                    Creamos wireframes, maquetas y prototipos interactivos para visualizar la solución antes del desarrollo.
+                    Creamos prototipos y diseños detallados. Validamos la solución con tu equipo antes de la implementación completa.
                   </CardDescription>
                 </Card>
               </div>
 
-              {/* Fase 3: Desarrollo Ágil */}
+              {/* Fase 3: Implementación y Desarrollo */}
               <div className="flex items-start md:justify-end md:pr-16 relative">
-                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <div className="absolute w-6 h-6 rounded-full top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block" style={{ background: accentGray }}></div>
                 <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
                   <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
-                    Fase 3: Desarrollo Ágil
+                    Fase 3: Implementación y Desarrollo
                   </CardTitle>
                   <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
-                    Construimos tu solución en iteraciones cortas, con entregas continuas y feedback constante.
+                    Desarrollamos e integramos la solución de forma ágil. Mantenemos comunicación constante y entregas incrementales.
                   </CardDescription>
                 </Card>
               </div>
 
-              {/* Fase 4: Implementación y Soporte */}
+              {/* Fase 4: Lanzamiento y Optimización */}
               <div className="flex items-start md:justify-start md:pl-16 relative">
-                <div className="absolute w-6 h-6 rounded-full bg-accent-mainBlue top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block"></div>
+                <div className="absolute w-6 h-6 rounded-full top-0 left-1/2 transform -translate-x-1/2 border-4 border-primary-neutral z-10 hidden md:block" style={{ background: accentGray }}></div>
                 <Card className="w-full md:w-11/12 p-8 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
                   <CardTitle className="text-[28px] text-primary-black font-bold mb-3">
-                    Fase 4: Implementación y Soporte
+                    Fase 4: Lanzamiento y Optimización
                   </CardTitle>
                   <CardDescription className="text-[16px] text-secondary-gray leading-relaxed">
-                    Desplegamos la solución en tu entorno y ofrecemos soporte post-lanzamiento para asegurar su óptimo funcionamiento.
+                    Lanzamos la solución y monitoreamos su rendimiento. Realizamos ajustes y optimizaciones continuas.
                   </CardDescription>
                 </Card>
               </div>
@@ -164,8 +167,8 @@ const ProjectSection = () => {
               Enfoque Metodológico Híbrido
             </h3>
             <p className="text-[18px] text-secondary-gray leading-relaxed">
-              Combinamos la <span className="font-semibold text-accent-mainBlue">metodología en cascada</span> para
-              un diagnóstico exhaustivo y la <span className="font-semibold text-accent-mainBlue">agilidad</span> para
+              Combinamos la <span className="font-semibold" style={{ color: accentGray }}>metodología en cascada</span> para
+              un diagnóstico exhaustivo y la <span className="font-semibold" style={{ color: accentGray }}>agilidad</span> para
               la implementación. Este enfoque híbrido nos permite ser precisos en la planificación y flexibles
               en la ejecución, garantizando que tu proyecto se adapte a tus necesidades cambiantes y se entregue
               con la máxima calidad y eficiencia.

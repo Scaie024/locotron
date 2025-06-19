@@ -3,6 +3,8 @@ import { Building2, Workflow, Cpu, ArrowRight, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+const accentGray = '#6B7280'; // Gris destacado
+
 const MethodologySection = () => {
   const methodologySteps = [
     {
@@ -32,86 +34,156 @@ const MethodologySection = () => {
   ];
 
   return (
-    <section id="metodologia" className="py-20 lg:py-32 bg-primary-neutral">
+    <section id="metodologia" className="py-20 lg:py-32 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-[48px] md:text-[56px] lg:text-[64px] text-primary-black mb-6 font-black">
-            Metodología OPT
+          <h2 className="text-5xl md:text-7xl font-black mb-8 text-primary-black leading-tight">
+            <span className="block">Nuestra</span>
+            <span className="block" style={{ color: accentGray }}>Metodología OPT</span>
           </h2>
-          <p className="text-[20px] md:text-[22px] lg:text-[24px] text-secondary-gray max-w-4xl mx-auto">
-            Un enfoque estructurado que garantiza resultados medibles y transformación real.
+          <p className="text-2xl md:text-3xl font-semibold text-secondary-gray mb-10 max-w-3xl mx-auto">
+            <span className="font-bold text-primary-black">Organización, Procesos y Tecnología</span> para resultados reales.
           </p>
         </div>
 
         {/* Process Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Organización */}
-          <div className="card p-6 rounded-2xl text-center bg-accent-bluePale/10 border-accent-blue/20 border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <div className="w-16 h-16 mx-auto mb-4 bg-accent-blue rounded-full flex items-center justify-center shadow-md">
-              <span className="text-white font-black text-2xl">O</span>
+          <div className="card p-6 rounded-2xl text-center bg-white/80 border transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: accentGray }}>
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md" style={{ background: accentGray }}>
+              <span className="text-white font-black text-3xl">O</span>
             </div>
-            <h4 className="text-h4 text-primary-black font-semibold mb-2">Organización</h4>
-            <p className="text-body text-secondary-gray leading-relaxed">
-              Definimos estructuras y roles claros para una operación eficiente.
+            <h4 className="text-2xl font-bold text-primary-black mb-2">Organización</h4>
+            <p className="text-lg text-secondary-gray leading-relaxed mb-2 font-semibold">
+              Estructuras y roles claros.
+            </p>
+            <p className="text-base text-secondary-gray">
+              <span className="font-bold">Ejemplo:</span> Comunicación interna 40% más efectiva.
             </p>
           </div>
           {/* Procesos */}
-          <div className="card p-6 rounded-2xl text-center bg-accent-greenLight/10 border-accent-green/20 border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <div className="w-16 h-16 mx-auto mb-4 bg-accent-green rounded-full flex items-center justify-center shadow-md">
-              <span className="text-white font-black text-2xl">P</span>
+          <div className="card p-6 rounded-2xl text-center bg-white/80 border transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: accentGray }}>
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md" style={{ background: accentGray }}>
+              <span className="text-white font-black text-3xl">P</span>
             </div>
-            <h4 className="text-h4 text-primary-black font-semibold mb-2">Procesos</h4>
-            <p className="text-body text-secondary-gray leading-relaxed">
-              Diseñamos flujos de trabajo optimizados para maximizar la productividad.
+            <h4 className="text-2xl font-bold text-primary-black mb-2">Procesos</h4>
+            <p className="text-lg text-secondary-gray leading-relaxed mb-2 font-semibold">
+              Flujos optimizados y automatizados.
+            </p>
+            <p className="text-base text-secondary-gray">
+              <span className="font-bold">Ejemplo:</span> Reducción de tiempo 60% en tareas repetitivas.
             </p>
           </div>
           {/* Tecnología */}
-          <div className="card p-6 rounded-2xl text-center bg-accent-bluePale/10 border-accent-mainBlue/20 border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <div className="w-16 h-16 mx-auto mb-4 bg-accent-mainBlue rounded-full flex items-center justify-center shadow-md">
-              <span className="text-white font-black text-2xl">T</span>
+          <div className="card p-6 rounded-2xl text-center bg-white/80 border transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: accentGray }}>
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md" style={{ background: accentGray }}>
+              <span className="text-white font-black text-3xl">T</span>
             </div>
-            <h4 className="text-h4 text-primary-black font-semibold mb-2">Tecnología</h4>
-            <p className="text-body text-secondary-gray leading-relaxed">
-              Implementamos soluciones tecnológicas que impulsan la innovación.
+            <h4 className="text-2xl font-bold text-primary-black mb-2">Tecnología</h4>
+            <p className="text-lg text-secondary-gray leading-relaxed mb-2 font-semibold">
+              Herramientas y soluciones digitales.
             </p>
+            <p className="text-base text-secondary-gray">
+              <span className="font-bold">Ejemplo:</span> ROI positivo en 6 meses.
+            </p>
+          </div>
+        </div>
+
+        {/* Results Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-2xl p-6 shadow-md border-l-4" style={{ borderColor: accentGray }}>
+            <h5 className="text-xl font-bold mb-2" style={{ color: accentGray }}>Resultados Medibles</h5>
+            <p className="text-lg text-secondary-gray font-semibold">Eficiencia, reducción de costos, crecimiento sostenible.</p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-md border-l-4" style={{ borderColor: '#00a86b' }}>
+            <h5 className="text-xl font-bold mb-2" style={{ color: '#00a86b' }}>Acompañamiento</h5>
+            <p className="text-lg text-secondary-gray font-semibold">Te guiamos en cada paso, transición fluida y exitosa.</p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-md border-l-4" style={{ borderColor: '#0066cc' }}>
+            <h5 className="text-xl font-bold mb-2" style={{ color: '#0066cc' }}>Transformación Real</h5>
+            <p className="text-lg text-secondary-gray font-semibold">Llevamos la transformación digital a la práctica.</p>
           </div>
         </div>
 
         {/* Case Study Highlight */}
-        <div className="bg-white rounded-3xl p-8 mb-16 shadow-xl border-l-8 border-accent-mainBlue">
-          <div className="flex items-start space-x-6">
-            <div className="w-12 h-12 rounded-full bg-accent-mainBlue/10 flex items-center justify-center flex-shrink-0">
-              <CheckCircle className="h-6 w-6 text-accent-mainBlue" />
-            </div>
-            <div>
-              <h3 className="text-[32px] text-primary-black mb-4 font-bold">
-                Caso de Éxito: Optimización de Atención al Cliente
-              </h3>
-              <p className="text-[18px] text-secondary-gray leading-relaxed mb-4">
-                Implementamos una solución integral que combina 
-                <span className="font-semibold text-accent-mainBlue"> osTicket</span>, 
-                <span className="font-semibold text-accent-mainBlue"> NocodeDB</span> y 
-                <span className="font-semibold text-accent-mainBlue"> n8n</span>. 
-                Los resultados: <span className="font-bold text-primary-black text-[24px]">35% más rápido</span> en 
-                tiempos de respuesta, sin aumentar costos ni personal.
-              </p>
-              <p className="text-[20px] font-bold text-accent-mainBlue">
-                Eficiencia real, resultados medibles
-              </p>
+        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-16 mb-20 backdrop-blur-sm shadow-xl">
+          <div className="text-center max-w-4xl mx-auto">
+            <h3 className="text-[36px] text-primary-black mb-8 font-bold tracking-tight">
+              Caso de Éxito: Empresa de Logística
+            </h3>
+            <p className="text-[18px] text-secondary-gray leading-relaxed">
+              Implementamos nuestra metodología OPT en una empresa de logística con <span className="font-semibold" style={{ color: accentGray }}>200 empleados</span>. 
+              Los resultados: <span className="font-semibold" style={{ color: accentGray }}>40% reducción en costos operativos</span>, 
+              <span className="font-semibold" style={{ color: accentGray }}> 60% mejora en tiempos de entrega</span> y 
+              <span className="font-semibold" style={{ color: accentGray }}> ROI del 300% en 12 meses</span>.
+            </p>
+          </div>
+        </div>
+
+        {/* Methodology Diagram */}
+        <div className="diagram-container mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-[32px] text-primary-black mb-4 font-bold">
+              Flujo de Implementación
+            </h3>
+            <p className="text-[18px] text-secondary-gray">
+              Proceso iterativo y adaptativo para tu empresa
+            </p>
+          </div>
+          
+          <div className="relative">
+            {/* Horizontal Line */}
+            <div className="diagram-line diagram-line-horizontal absolute top-1/2 left-0 transform -translate-y-1/2"></div>
+            
+            {/* Nodes */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+              <div className="diagram-node top-0 left-0 transform -translate-y-1/2 text-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ background: accentGray }}>
+                  <span className="text-white font-bold text-lg">1</span>
+                </div>
+                <h4 className="font-bold text-primary-black mb-2">Diagnóstico</h4>
+                <p className="text-sm text-secondary-gray">Análisis completo</p>
+              </div>
+              
+              <div className="diagram-node top-0 left-1/3 transform -translate-y-1/2 text-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ background: accentGray }}>
+                  <span className="text-white font-bold text-lg">2</span>
+                </div>
+                <h4 className="font-bold text-primary-black mb-2">Estrategia</h4>
+                <p className="text-sm text-secondary-gray">Plan de acción</p>
+              </div>
+              
+              <div className="diagram-node top-0 left-2/3 transform -translate-y-1/2 text-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ background: accentGray }}>
+                  <span className="text-white font-bold text-lg">3</span>
+                </div>
+                <h4 className="font-bold text-primary-black mb-2">Implementación</h4>
+                <p className="text-sm text-secondary-gray">Desarrollo ágil</p>
+              </div>
+              
+              <div className="diagram-node top-0 right-0 transform -translate-y-1/2 text-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ background: accentGray }}>
+                  <span className="text-white font-bold text-lg">4</span>
+                </div>
+                <h4 className="font-bold text-primary-black mb-2">Optimización</h4>
+                <p className="text-sm text-secondary-gray">Mejora continua</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA Section */}
         <div className="text-center">
-          <Button 
-            className="btn-primary text-[20px] px-10 py-5 rounded-2xl"
-            onClick={() => document.getElementById('stack')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Ver Más Casos de Éxito
-            <ArrowRight className="ml-3 h-5 w-5" />
-          </Button>
+          <h3 className="text-[32px] text-primary-black mb-6 font-bold">
+            ¿Quieres implementar nuestra metodología?
+          </h3>
+          <p className="text-[18px] text-secondary-gray mb-8 max-w-2xl mx-auto">
+            Agenda una consultoría gratuita y descubre cómo podemos transformar tu empresa.
+          </p>
+          <button className="btn-primary text-xl px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-black" style={{ background: accentGray, color: '#fff', border: 'none' }}>
+            Solicita tu diagnóstico gratuito
+          </button>
         </div>
       </div>
     </section>
