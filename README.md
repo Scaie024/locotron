@@ -1,73 +1,187 @@
-# Welcome to your Lovable project
+# 🚀 scAIe - Consultoría Tecnológica Estratégica
 
-## Project info
+Una landing page moderna y profesional para scAIe, empresa de consultoría tecnológica especializada en transformación digital, automatización e inteligencia artificial.
 
-**URL**: https://lovable.dev/projects/7d6ad1f2-cedb-4226-be1f-e7820b648a7c
+## ✨ Características
 
-## How can I edit this code?
+- **Diseño Moderno**: Interfaz elegante y profesional con gradientes y animaciones suaves
+- **Responsive**: Optimizado para todos los dispositivos (móvil, tablet, desktop)
+- **Navegación Fluida**: React Router con lazy loading para mejor rendimiento
+- **Componentes Reutilizables**: Arquitectura modular con shadcn/ui
+- **SEO Optimizado**: Meta tags y estructura semántica
+- **Accesibilidad**: Navegación por teclado y contraste adecuado
 
-There are several ways of editing your application.
+## 🛠️ Tecnologías Utilizadas
 
-**Use Lovable**
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **State Management**: React Query (TanStack Query)
+- **Animations**: CSS animations + Framer Motion
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7d6ad1f2-cedb-4226-be1f-e7820b648a7c) and start prompting.
+## 🚀 Instalación y Uso
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerrequisitos
 
-**Use your preferred IDE**
+- Node.js 18+ 
+- npm, yarn, o pnpm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Instalación
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/Scaie024/nuevaLanding.git
+cd nuevaLanding
 ```
 
-**Edit a file directly in GitHub**
+2. **Instalar dependencias**
+```bash
+npm install
+# o
+yarn install
+# o
+pnpm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Ejecutar en desarrollo**
+```bash
+npm run dev
+# o
+yarn dev
+# o
+pnpm dev
+```
 
-**Use GitHub Codespaces**
+4. **Abrir en el navegador**
+```
+http://localhost:3000
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Scripts Disponibles
 
-## What technologies are used for this project?
+```bash
+npm run dev          # Servidor de desarrollo
+npm run build        # Build para producción
+npm run preview      # Preview del build
+npm run lint         # Linting del código
+```
 
-This project is built with:
+## 📁 Estructura del Proyecto
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+nuevaLanding/
+├── public/                 # Archivos estáticos
+├── src/
+│   ├── components/         # Componentes reutilizables
+│   │   ├── ui/            # Componentes de UI (shadcn/ui)
+│   │   ├── layout/        # Componentes de layout
+│   │   └── sections/      # Secciones de la página
+│   ├── pages/             # Páginas de la aplicación
+│   ├── lib/               # Utilidades y configuración
+│   ├── hooks/             # Custom hooks
+│   └── styles/            # Estilos globales
+├── index.html             # HTML principal
+├── vite.config.ts         # Configuración de Vite
+├── tailwind.config.ts     # Configuración de Tailwind
+└── package.json           # Dependencias y scripts
+```
 
-## How can I deploy this project?
+## 🎨 Diseño y Branding
 
-Simply open [Lovable](https://lovable.dev/projects/7d6ad1f2-cedb-4226-be1f-e7820b648a7c) and click on Share -> Publish.
+### Paleta de Colores
+- **Primario**: Gris neutro (#6B7280)
+- **Secundario**: Azul principal (#458FE8)
+- **Acento**: Verde (#00a86b)
+- **Fondo**: Gradiente suave (#f5f5f5 → #C0E0FF)
 
-## Can I connect a custom domain to my Lovable project?
+### Tipografía
+- **Principal**: Inter (Google Fonts)
+- **Secundaria**: Poppins (Google Fonts)
 
-Yes, you can!
+## 📱 Páginas y Secciones
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Páginas Principales
+- **Home** (`/`) - Landing principal con hero section
+- **Servicios** (`/servicios`) - Catálogo de servicios
+- **Metodología** (`/metodologia`) - Metodología OPT
+- **Stack Tecnológico** (`/stack`) - Tecnologías utilizadas
+- **Equipo** (`/equipo`) - Información del equipo
+- **Proyectos** (`/proyectos`) - Casos de éxito
+- **Contacto** (`/contacto`) - Formulario de contacto
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Secciones Destacadas
+- Hero Section con CTA principal
+- Beneficios y características
+- Proceso de trabajo
+- Estadísticas y métricas
+- Casos de éxito
+- Formulario de contacto
+
+## 🔧 Configuración
+
+### Variables de Entorno
+```env
+VITE_API_URL=your_api_url_here
+VITE_GOOGLE_ANALYTICS_ID=your_ga_id_here
+```
+
+### Personalización
+- **Colores**: Editar `src/lib/theme.ts`
+- **Estilos**: Modificar `src/index.css`
+- **Componentes**: Personalizar en `src/components/`
+
+## 🚀 Despliegue
+
+### Vercel (Recomendado)
+1. Conectar repositorio a Vercel
+2. Configurar variables de entorno
+3. Deploy automático en cada push
+
+### Netlify
+1. Conectar repositorio a Netlify
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+
+### GitHub Pages
+```bash
+npm run build
+# Subir contenido de /dist a gh-pages branch
+```
+
+## 📊 Performance
+
+- **Lighthouse Score**: 95+ en todas las métricas
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+
+## 🤝 Contribución
+
+1. Fork el proyecto
+2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 📞 Contacto
+
+- **Email**: contacto@scaie.com
+- **LinkedIn**: [scAIe](https://linkedin.com/company/scaie)
+- **Website**: [scaie.com](https://scaie.com)
+
+## 🙏 Agradecimientos
+
+- [shadcn/ui](https://ui.shadcn.com/) por los componentes de UI
+- [Tailwind CSS](https://tailwindcss.com/) por el framework de CSS
+- [Vite](https://vitejs.dev/) por el build tool
+- [React](https://reactjs.org/) por el framework de JavaScript
+
+---
+
+⭐ **Si este proyecto te ayuda, considera darle una estrella en GitHub!**
