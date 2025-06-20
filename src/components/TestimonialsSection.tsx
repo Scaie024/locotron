@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Quote, Star, Building2, Workflow, Cpu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,12 +79,12 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-8 text-primary-black leading-tight">
-            <span className="block">Casos de Éxito</span>
-            <span className="block" style={{ color: '#D2AA52' }}>con Metodología OPT</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-8 text-primary-black leading-tight">
+            <span className="block">Resultados que Inspiran</span>
+            <span className="block" style={{ color: '#D2AA52' }}>Historias de Éxito</span>
           </h2>
           <p className="text-xl md:text-2xl text-secondary-gray max-w-3xl mx-auto">
-            Empresas que transformaron sus operaciones aplicando Organización, Procesos y Tecnología.
+            Descubre cómo hemos ayudado a empresas como la tuya a alcanzar sus metas.
           </p>
         </div>
 
@@ -209,13 +210,14 @@ const TestimonialsSection = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <p className="text-xl text-secondary-gray mb-8">
-            ¿Quieres resultados similares en tu empresa?
+            ¿Quieres obtener resultados similares?
           </p>
           <Button 
+            asChild
             className="btn-primary text-xl px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-black"
             style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
           >
-            Solicita tu diagnóstico OPT gratuito
+            <Link to="/contacto">Agenda una consulta</Link>
           </Button>
         </div>
       </div>

@@ -56,16 +56,16 @@ const HeroSection = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-primary-neutral via-white to-gray-200 pt-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-primary-neutral via-white to-gray-200 pt-32 overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24 text-center animate-fade-in">
           {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-primary-black mb-6 leading-[0.9] font-black tracking-tight text-balance drop-shadow-xl">
+          <h1 className="text-4xl md:text-6xl text-primary-black mb-6 leading-tight font-black tracking-tight text-balance drop-shadow-xl">
             <span className="block">Transforma tu empresa</span>
-            <span className="block" style={{ color: '#D2AA52' }}>con metodología OPT</span>
+            <span className="block" style={{ color: '#D2AA52' }}>con la metodología OPT</span>
           </h1>
           {/* Subtitle */}
-          <h2 className="text-lg md:text-2xl lg:text-3xl text-secondary-gray mb-8 max-w-3xl mx-auto leading-tight font-bold text-balance">
-            <span className="font-bold text-primary-black">Organización, Procesos y Tecnología</span> para resultados extraordinarios.
+          <h2 className="text-lg md:text-xl lg:text-2xl text-secondary-gray mb-8 max-w-3xl mx-auto leading-tight font-bold text-balance">
+            Alineamos <span className="font-bold text-primary-black">Organización, Procesos y Tecnología</span> para potenciar tus resultados.
           </h2>
           {/* CTA Button */}
           <div className="flex justify-center mb-10">
@@ -84,7 +84,7 @@ const HeroSection = () => {
           {/* OPT Methodology Highlight */}
           <div className="mb-12">
             <h3 className="text-xl md:text-2xl font-bold text-primary-black mb-6">
-              Nuestra Metodología OPT
+              Los 3 Pilares de Nuestra Metodología
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {optBenefits.map((benefit, i) => (
@@ -146,11 +146,11 @@ const HeroSection = () => {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-primary-black leading-tight">
-              <span className="block">Cómo aplicamos OPT</span>
-              <span className="block" style={{ color: '#D2AA52' }}>en tu empresa</span>
+              <span className="block">Nuestro Proceso</span>
+              <span className="block" style={{ color: '#D2AA52' }}>Simple y Transparente</span>
             </h2>
             <p className="text-base md:text-lg lg:text-xl font-semibold text-secondary-gray max-w-3xl mx-auto">
-              Proceso simple y transparente siguiendo nuestra metodología OPT para resultados extraordinarios.
+              Te guiamos en cada paso de la transformación para asegurar el éxito.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -197,11 +197,11 @@ const HeroSection = () => {
       <section className="py-16 bg-primary-neutral">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-primary-black leading-tight">
-            <span className="block">¿Listo para transformar</span>
-            <span className="block" style={{ color: '#D2AA52' }}>tu empresa con OPT?</span>
+            <span className="block">¿Listo para potenciar</span>
+            <span className="block" style={{ color: '#D2AA52' }}>el futuro de tu empresa?</span>
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-secondary-gray mb-8 max-w-3xl mx-auto">
-            Únete a las empresas que ya están aplicando nuestra metodología OPT para lograr resultados extraordinarios.
+            Descubre cómo nuestra metodología puede llevar tu negocio al siguiente nivel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

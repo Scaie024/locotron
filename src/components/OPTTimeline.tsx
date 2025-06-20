@@ -136,12 +136,12 @@ const OPTTimeline = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-8 text-primary-black leading-tight">
-            <span className="block">Timeline de</span>
-            <span className="block" style={{ color: '#D2AA52' }}>Implementación OPT</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-8 text-primary-black leading-tight">
+            <span className="block">Nuestra Hoja de Ruta</span>
+            <span className="block" style={{ color: '#D2AA52' }}>Hacia la Transformación</span>
           </h2>
           <p className="text-xl md:text-2xl text-secondary-gray max-w-3xl mx-auto">
-            Proceso estructurado y transparente para transformar tu empresa con metodología OPT.
+            Un proceso claro y probado para garantizar el éxito de tu proyecto.
           </p>
         </div>
 

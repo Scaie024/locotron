@@ -15,6 +15,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const ServicesSection = () => {
   // Servicios organizados por metodología OPT
@@ -120,7 +121,7 @@ const ServicesSection = () => {
         {/* OPT Methodology Overview */}
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-primary-black mb-10">
-            Nuestros Servicios por Metodología OPT
+            Servicios por Pilar OPT
           </h3>
           
           {/* Organización */}
@@ -223,7 +224,7 @@ const ServicesSection = () => {
         {/* Benefits Section */}
         <div className="mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-primary-black mb-8">
-            ¿Por qué elegir nuestros servicios OPT?
+            El Sello de Calidad OPT
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -252,31 +253,23 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-primary-black mb-6">
-            ¿Listo para aplicar OPT en tu empresa?
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-primary-black mb-4">
+            ¿Listo para optimizar tu empresa?
           </h3>
           <p className="text-base md:text-lg text-secondary-gray mb-8 max-w-2xl mx-auto">
-            Descubre cómo nuestra metodología OPT puede transformar tu empresa y llevarte al siguiente nivel.
+            Descubre cómo nuestros servicios pueden transformar tu negocio. Contáctanos para un diagnóstico gratuito.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contacto"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              style={{ background: '#D2AA52', border: 'none' }}
+          <Link to="/contacto">
+            <Button 
+              className="btn-primary text-base px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
+              style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
             >
-              Solicita tu diagnóstico OPT gratuito
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link 
-              to="/metodologia"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-xl border-2 transition-all duration-300"
-              style={{ borderColor: '#D2AA52', color: '#D2AA52' }}
-            >
-              Conoce nuestra metodología OPT
-            </Link>
-          </div>
+              Contactar ahora
+              <ArrowRight className="ml-2 h-4 w-4 inline" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
