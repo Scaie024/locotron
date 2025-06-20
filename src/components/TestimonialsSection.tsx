@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Quote, Star, Building2, Workflow, Cpu } from 'lucide-react';
@@ -57,19 +57,19 @@ const TestimonialsSection = () => {
     }
   ];
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
-  const prevTestimonial = () => {
+  const prevTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   // Auto-advance testimonials
   useEffect(() => {
     const interval = setInterval(nextTestimonial, 8000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextTestimonial]);
 
   const currentTestimonial = testimonials[currentIndex];
 
