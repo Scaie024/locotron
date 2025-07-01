@@ -185,3 +185,9 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ---
 
 ⭐ **Si este proyecto te ayuda, considera darle una estrella en GitHub!**
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Scaie024/nuevaLanding)
+
+## GitHub Repository
+
+https://github.com/Scaie024/nuevaLanding
