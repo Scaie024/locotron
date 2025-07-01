@@ -112,7 +112,7 @@ const Footer = () => {
                 contacto@scaie.com
               </a>
               <a 
-                href="https://wa.me/5215512345678"
+                href="https://wa.me/5215535913417"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-secondary-gray hover:text-opt-organizacion transition-colors text-sm"
@@ -146,12 +146,12 @@ const Footer = () => {
             © 2025 scAIe. Metodología OPT. Todos los derechos reservados.
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-secondary-gray hover:text-opt-organizacion transition-colors text-legal">
+            <Link to="/privacidad" className="text-secondary-gray hover:text-opt-organizacion transition-colors text-legal">
               Aviso de Privacidad
-            </a>
-            <a href="#" className="text-secondary-gray hover:text-opt-organizacion transition-colors text-legal">
+            </Link>
+            <Link to="/terminos" className="text-secondary-gray hover:text-opt-organizacion transition-colors text-legal">
               Términos y Condiciones
-            </a>
+            </Link>
           </div>
         </div>
       </div>

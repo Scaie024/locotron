@@ -162,12 +162,12 @@ const ContactSection = () => {
                     <Phone className="h-6 w-6 text-accent-mainBlue" />
                   </div>
                   <a 
-                    href="https://wa.me/5215512345678"
+                    href="https://wa.me/5215535913417"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[18px] text-secondary-gray hover:text-accent-mainBlue transition-colors"
                   >
-                    WhatsApp: +52 (55) 1234-5678
+                    WhatsApp: +52 (55) 3591-3417
                   </a>
                 </div>
                 <div className="flex items-center space-x-4">

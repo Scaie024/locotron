@@ -47,6 +47,28 @@ const MethodologySection = () => {
           </p>
         </div>
 
+        {/* OPT Methodology Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-4">Organización</h3>
+            <p className="text-gray-700">
+              Reestructuramos tu organización para alinear talentos, roles y responsabilidades con tus objetivos estratégicos.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-4">Procesos</h3>
+            <p className="text-gray-700">
+              Optimizamos tus procesos operativos y de negocio para mejorar eficiencia, reducir costos y aumentar calidad.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold mb-4">Tecnología</h3>
+            <p className="text-gray-700">
+              Implementamos soluciones tecnológicas a medida que potencian tu organización y procesos.
+            </p>
+          </div>
+        </div>
+
         {/* Process Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Organización */}

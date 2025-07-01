@@ -11,19 +11,22 @@ const TeamSection = () => {
       name: "Arturo Pinzón",
       specialty: "Arquitecto de Soluciones en Conectividad y Software",
       bio: "Experto en diseñar infraestructuras robustas y escalables.",
-      image: "/Arturo Pinzon.jpg"
+      image: "/Arturo Pinzon.jpg",
+      linkedin: "https://www.linkedin.com/in/arturo-pinzon-047b38185/"
     },
     {
       name: "Marypaz Santín",
       specialty: "Especialista en Estrategia de Comunicación y Prospección",
       bio: "Conectando negocios con soluciones efectivas.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b0ad2a21?w=400&h=400&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1494790108755-2616b0ad2a21?w=400&h=400&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/marypazsantin13/"
     },
     {
       name: "Leonardo Escobar",
       specialty: "Consultor Senior en Procesos y Analítica de Datos",
       bio: "Transformando datos en estrategias accionables.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/leonardo-escobar-/"
     },
     {
       name: "Ariel Martínez",
@@ -35,7 +38,8 @@ const TeamSection = () => {
       name: "Octavio Alonso",
       specialty: "Abogado Corporativo para Softlanding Internacional",
       bio: "Facilitando la expansión global de tu empresa.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/octavio-alonso-alfonsin/"
     },
     {
       name: "Enrique Ayala",
@@ -47,7 +51,8 @@ const TeamSection = () => {
       name: "Samuel Chavarría",
       specialty: "Desarrollador Ágil con Enfoque ITIL",
       bio: "Construyendo soluciones eficientes sin comprometer la calidad.",
-      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/samuel-chavarr%C3%ADa-sanjuan-30b11179/"
     }
   ];
 
@@ -99,7 +104,20 @@ const TeamSection = () => {
                 />
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl font-semibold">{member.name}</CardTitle>
+                <CardTitle className="text-xl font-semibold">
+                  {member.linkedin ? (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-black hover:text-blue-700 transition-colors underline"
+                    >
+                      {member.name}
+                    </a>
+                  ) : (
+                    member.name
+                  )}
+                </CardTitle>
                 <CardDescription className="text-sm text-gray-600">{member.specialty}</CardDescription>
                 <p className="text-gray-500 mt-2">{member.bio}</p>
               </CardContent>

@@ -3,10 +3,10 @@ import ServicesSection from '@/components/ServicesSection';
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="services-page">
       <Navigation />
       <ServicesSection />
       <Footer />
     </div>
   );
-} 
+}

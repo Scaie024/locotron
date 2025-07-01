@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Privacidad from "./pages/Privacidad";
+import Terminos from "./pages/Terminos";
 
 // Lazy load pages for better performance
 const MethodologyPage = lazy(() => import("./pages/Methodology"));
@@ -49,6 +51,8 @@ const App = () => (
             <Route path="/equipo" element={<TeamPage />} />
             <Route path="/proyectos" element={<ProjectsPage />} />
             <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="/terminos" element={<Terminos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

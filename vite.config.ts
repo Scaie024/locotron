@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 import path from "path";
 import postcss from "postcss";
 import tailwindcss from "tailwindcss";
@@ -8,11 +8,12 @@ import autoprefixer from "autoprefixer";
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    host: true,
-    port: 3000,
-    strictPort: false,
     open: true,
-    cors: true
+    cors: true,
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost'
+    }
   },
   plugins: [react()],
   resolve: {

@@ -18,6 +18,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import Navigation from '@/components/Navigation';
 
 const Methodology = () => {
   const optPhases = [
@@ -140,8 +141,9 @@ const Methodology = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-neutral via-white to-gray-100">
+      <Navigation />
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className="pt-12 pb-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-primary-black leading-tight">
@@ -413,4 +415,4 @@ const Methodology = () => {
   );
 };
 
-export default Methodology; 
+export default Methodology;

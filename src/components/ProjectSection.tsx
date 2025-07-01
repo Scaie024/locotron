@@ -51,7 +51,7 @@ const ProjectSection = () => {
             <span className="block" style={{ color: accentGray }}>tu proyecto con scAIe</span>
           </h2>
           <p className="text-2xl md:text-3xl font-semibold text-secondary-gray mb-10 max-w-3xl mx-auto">
-            <span className="font-bold text-primary-black">Proceso claro y resultados tangibles.</span>
+            <span className="font-bold text-primary-black">Más de 35 proyectos exitosos</span> en nuestros 3 años de creación.
           </p>
         </div>
 
