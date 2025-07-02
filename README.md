@@ -188,6 +188,8 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Scaie024/nuevaLanding)
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/Scaie024/nuevaLanding)](https://github.com/Scaie024/nuevaLanding)
+
 ## GitHub Repository
 
 https://github.com/Scaie024/nuevaLanding

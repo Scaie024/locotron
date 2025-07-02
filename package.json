@@ -1,12 +1,13 @@
 {
   "name": "nuevaLanding",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "npx vite",
     "build": "tsc && vite build",
     "build:dev": "vite build --mode development",
+    "deploy": "npm run build && netlify deploy --prod",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -84,5 +85,9 @@
   "resolutions": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-username>/<your-repo>.git"
   }
 }

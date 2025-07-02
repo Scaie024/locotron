@@ -1,3 +1,4 @@
+// GitHub Repository: https://github.com/<your-username>/<your-repo>
 import { useEffect } from 'react';
 import { Navigation, Footer } from '@/components/layout';
 import ServicesSection from '@/components/ServicesSection';

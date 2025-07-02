@@ -130,3 +130,8 @@ yarn-error.log*
 
 # Turbo
 .turbo
+
+# Ignore deployment artifacts
+.netlify
+dist
+node_modules
