@@ -90,6 +90,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container {
+  max-width: 100%; /* Ensure container doesn't overflow */
+  padding: 0 20px; /* Add some padding */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent container from overflowing */
 }
 
 /* Typography */
@@ -109,6 +117,18 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  max-width: 100%; /* Ensure button doesn't overflow container */
+}
+
+@media (max-width: 768px) {
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    white-space: normal; /* Allow text wrapping on mobile */
+    text-align: center; /* Center text on mobile */
+  }
 }
 
 .btn-primary:hover {
@@ -438,6 +458,8 @@ h1, h2, h3, h4, h5, h6 {
   .btn-primary {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
+    white-space: normal; /* Allow text wrapping on mobile */
+    text-align: center; /* Center text on mobile */
   }
   
   .card {
@@ -446,6 +468,27 @@ h1, h2, h3, h4, h5, h6 {
   
   .animate-float {
     animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    margin: 10px 0;
+    padding: 15px;
   }
 }
 

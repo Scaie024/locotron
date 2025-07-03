@@ -62,7 +62,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-gray-800 z-50 border-b border-gray-700 shadow-lg py-2">
-      <div className="hidden md:flex items-center justify-between mx-auto px-4 max-w-7xl">
+      <div className="flex items-center justify-between mx-auto px-4 max-w-7xl">
         <div className="flex-shrink-0 pr-6 md:pr-12">
           <Link to="/" className="flex items-center">
             <span className="text-h3 md:text-h2 lg:text-[40px] font-black text-contrast tracking-tight">scAIe</span>
@@ -116,30 +116,30 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Converted to dropdown */}
       {isMenuOpen && (
-        <div className={`fixed inset-0 bg-gray-800 z-40 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-          <div className="px-4 pt-6 pb-8 space-y-4 border-t border-gray-700 rounded-b-2xl shadow-xl mt-2">
+        <div className="md:hidden absolute right-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-lg py-2 z-40 border border-gray-700">
+          <div className="px-2 pt-2 pb-2 space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.to}
-                className="block px-4 py-4 text-lg text-white hover:text-opt-organizacion transition-colors duration-300 font-semibold hover:bg-gray-700 rounded-xl"
+                className="block px-4 py-3 text-base text-white hover:bg-gray-700 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <div className="font-bold">{item.name}</div>
-                <div className="text-sm text-gray-400 mt-1">{item.description}</div>
+                <div className="text-xs text-gray-400 mt-1">{item.description}</div>
               </Link>
             ))}
-            <div className="pt-4 border-t border-gray-700">
+            <div className="pt-2 px-4">
               <Button 
-                className="bg-gray-500 hover:bg-gray-600 text-white text-button-lg py-4 rounded-2xl shadow-md"
+                className="bg-gray-500 hover:bg-gray-600 text-white w-full text-button-lg py-3 rounded-xl shadow-md"
                 onClick={() => {
                   setIsMenuOpen(false);
                   window.open('https://calendly.com/scaie-empresa/30min', '_blank');
                 }}
               >
-                Diagnóstico OPT Gratuito
+                Diagnóstico OPT
               </Button>
             </div>
           </div>
