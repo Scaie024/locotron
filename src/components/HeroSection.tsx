@@ -3,7 +3,23 @@ import { ArrowRight, Users, BarChart3, Zap, CheckCircle2, Target, TrendingUp, Aw
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  secondaryText: string;
+  secondaryLink: string;
+}
+
+const HeroSection = ({ 
+  title, 
+  description, 
+  ctaText, 
+  ctaLink, 
+  secondaryText, 
+  secondaryLink 
+}: HeroSectionProps) => {
   const optBenefits = [
     {
       icon: <Building2 className="h-6 w-6" />, 
@@ -70,9 +86,8 @@ const HeroSection = () => {
           {/* CTA Button */}
           <div className="flex justify-center mb-10">
             <Button 
-              className="btn-primary text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
+              className="bg-gray-500 hover:bg-gray-600 text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
               asChild
-              style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
             >
               <Link to="/contacto">
                 Solicita tu diagnóstico OPT gratuito
@@ -205,8 +220,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              className="btn-primary text-base px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
-              style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
+              className="bg-gray-500 hover:bg-gray-600 text-white text-base px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
               asChild
             >
               <Link to="/contacto">

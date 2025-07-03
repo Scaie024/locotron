@@ -203,7 +203,7 @@ const TechStackSection = () => {
           <p className="text-[18px] text-secondary-gray mb-8 max-w-2xl mx-auto">
             Nuestro equipo puede trabajar con cualquier tecnología. Agenda una consultoría y descubre las mejores opciones para tu proyecto.
           </p>
-          <button className="btn-primary text-xl px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-black" style={{ background: accentGray, color: '#fff', border: 'none' }}>
+          <button className="bg-gray-500 hover:bg-gray-600 text-white text-xl px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-black">
             Solicita tu diagnóstico gratuito
           </button>
         </div>

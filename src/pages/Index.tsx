@@ -1,10 +1,8 @@
 import React from 'react';
 import { Navigation, Footer } from '@/components/layout';
 import HeroSection from '@/components/HeroSection';
-import WorkflowShowcase from '@/components/ai/WorkflowShowcase';
-import TechComparison from '@/components/ai/TechComparison';
-import CaseStudies from '@/components/sections/CaseStudies';
-import AiTestimonials from '@/components/sections/AiTestimonials';
+import ServicesSection from '@/components/ServicesSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import MethodologySection from '@/components/MethodologySection';
 
 export default function IndexPage() {
@@ -24,29 +22,8 @@ export default function IndexPage() {
       
       <MethodologySection />
       
-      <WorkflowShowcase 
-        tools={['n8n', 'Make', 'Zapier']}
-        llms={['GPT-4', 'Claude', 'Llama3']}
-      />
-      
-      <TechComparison />
-      
-      <CaseStudies 
-        cases={[
-          {
-            title: "E-commerce de Moda",
-            result: "+40% conversiones",
-            tools: ["n8n", "Claude", "Vercel"]
-          },
-          {
-            title: "Soporte Automatizado",
-            result: "-70% tiempo respuesta",
-            tools: ["Make", "GPT-4", "Airtable"]
-          }
-        ]}
-      />
-      
-      <AiTestimonials />
+      <ServicesSection />
+      <TestimonialsSection />
       
       <Footer />
     </div>

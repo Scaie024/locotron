@@ -16,6 +16,7 @@ const ServicesPage = lazy(() => import("./pages/Services"));
 const TeamPage = lazy(() => import("./pages/Team"));
 const ProjectsPage = lazy(() => import("./pages/Projects"));
 const ContactPage = lazy(() => import("./pages/Contact"));
+const WorkshopPage = lazy(() => import("./pages/WorkshopPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/privacidad" element={<Privacidad />} />
             <Route path="/terminos" element={<Terminos />} />
+            <Route path="/workshop" element={<WorkshopPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -8,9 +8,14 @@ const Navigation = () => {
 
   const navItems = [
     { 
-      name: 'Servicios OPT', 
+      name: 'Servicios', 
       to: '/servicios',
       description: 'Organización, Procesos y Tecnología'
+    },
+    { 
+      name: 'Workshop', 
+      to: '/workshop',
+      description: 'Workshop'
     },
     { 
       name: 'Metodología OPT', 
@@ -56,95 +61,90 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-primary-black z-50 border-b border-gray-800 shadow-lg py-2">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex justify-between items-center h-24 md:h-28">
-          {/* Logo */}
-          <div className="flex-shrink-0 pr-6 md:pr-12">
-            <Link to="/" className="flex items-center">
-              <span className="text-h3 md:text-h2 lg:text-[40px] font-black text-primary-neutral tracking-tight">scAIe</span>
-              <div className="ml-3 flex space-x-1">
-                <div className="w-2 h-2 rounded-full bg-opt-organizacion"></div>
-                <div className="w-2 h-2 rounded-full bg-opt-procesos"></div>
-                <div className="w-2 h-2 rounded-full bg-opt-tecnologias"></div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <div key={item.name} className="group relative">
-                  <Link
-                    to={item.to}
-                    className="text-body-lg md:text-xl lg:text-[20px] text-white hover:text-opt-organizacion transition-colors duration-300 font-semibold hover:scale-105 transform px-3 md:px-4 py-2 md:py-3 rounded-xl"
-                  >
-                    {item.name}
-                  </Link>
-                  {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-50">
-                    {item.description}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
-                  </div>
-                </div>
-              ))}
+    <nav className="fixed top-0 w-full bg-gray-800 z-50 border-b border-gray-700 shadow-lg py-2">
+      <div className="hidden md:flex items-center justify-between mx-auto px-4 max-w-7xl">
+        <div className="flex-shrink-0 pr-6 md:pr-12">
+          <Link to="/" className="flex items-center">
+            <span className="text-h3 md:text-h2 lg:text-[40px] font-black text-contrast tracking-tight">scAIe</span>
+            <div className="ml-3 flex space-x-1">
+              <div className="w-2 h-2 rounded-full bg-opt-organizacion"></div>
+              <div className="w-2 h-2 rounded-full bg-opt-procesos"></div>
+              <div className="w-2 h-2 rounded-full bg-opt-tecnologias"></div>
             </div>
-          </div>
+          </Link>
+        </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block ml-10">
-            <Button 
-              className="btn-primary text-button-lg px-8 py-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
-              style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
-              onClick={() => window.open('https://calendly.com/scaie-empresa/30min', '_blank')}
-            >
-              Diagnóstico OPT Gratuito
-            </Button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white transition-colors duration-300 p-2 hover:text-opt-organizacion"
-            >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+        {/* Desktop Navigation */}
+        <div className="hidden md:block">
+          <div className="ml-10 flex items-baseline space-x-8">
+            {navItems.map((item) => (
+              <div key={item.name} className="group relative">
+                <Link
+                  to={item.to}
+                  className="text-body-lg md:text-xl lg:text-[20px] text-white hover:text-opt-organizacion transition-colors duration-300 font-semibold hover:scale-105 transform px-3 md:px-4 py-2 md:py-3 rounded-xl"
+                >
+                  {item.name}
+                </Link>
+                {/* Tooltip */}
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-50">
+                  {item.description}
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-4 pt-6 pb-8 space-y-4 bg-primary-black border-t border-gray-800 rounded-b-2xl shadow-xl mt-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.to}
-                  className="block px-4 py-4 text-lg text-white hover:text-opt-organizacion transition-colors duration-300 font-semibold hover:bg-gray-800 rounded-xl"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="font-bold">{item.name}</div>
-                  <div className="text-sm text-gray-400 mt-1">{item.description}</div>
-                </Link>
-              ))}
-              <div className="pt-4 border-t border-gray-800">
-                <Button 
-                  className="btn-primary w-full text-button-lg py-4 rounded-2xl shadow-md"
-                  style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    window.open('https://calendly.com/scaie-empresa/30min', '_blank');
-                  }}
-                >
-                  Diagnóstico OPT Gratuito
-                </Button>
-              </div>
+        {/* CTA Button */}
+        <div className="hidden md:block ml-10">
+          <Button 
+            className="bg-gray-500 hover:bg-gray-600 text-white text-button-lg px-8 py-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
+            onClick={() => window.open('https://calendly.com/scaie-empresa/30min', '_blank')}
+          >
+            Diagnóstico OPT Gratuito
+          </Button>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-white transition-colors duration-300 p-2 hover:text-opt-organizacion"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className={`fixed inset-0 bg-gray-800 z-40 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+          <div className="px-4 pt-6 pb-8 space-y-4 border-t border-gray-700 rounded-b-2xl shadow-xl mt-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.to}
+                className="block px-4 py-4 text-lg text-white hover:text-opt-organizacion transition-colors duration-300 font-semibold hover:bg-gray-700 rounded-xl"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="font-bold">{item.name}</div>
+                <div className="text-sm text-gray-400 mt-1">{item.description}</div>
+              </Link>
+            ))}
+            <div className="pt-4 border-t border-gray-700">
+              <Button 
+                className="bg-gray-500 hover:bg-gray-600 text-white text-button-lg py-4 rounded-2xl shadow-md"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.open('https://calendly.com/scaie-empresa/30min', '_blank');
+                }}
+              >
+                Diagnóstico OPT Gratuito
+              </Button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 };

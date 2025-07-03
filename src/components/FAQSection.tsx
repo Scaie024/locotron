@@ -208,9 +208,8 @@ const FAQSection = () => {
             Nuestro equipo de expertos está listo para responder todas tus dudas y ayudarte a entender cómo OPT puede transformar tu empresa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="btn-primary text-lg px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
-              style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
+            <Button
+              className="bg-gray-500 hover:bg-gray-600 text-white text-lg px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
             >
               Agenda una consulta gratuita
             </Button>

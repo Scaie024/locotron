@@ -35,8 +35,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacto" className="py-20 lg:py-32 bg-gradient-to-br from-primary-neutral via-white to-gray-100">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="contacto" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-7xl font-black mb-8 text-primary-black leading-tight">
@@ -50,7 +50,7 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="border-none shadow-xl">
+          <Card className="rounded-2xl border-none shadow-xl bg-procesos">
             <CardHeader className="pb-6">
               <CardTitle className="text-[32px] text-primary-black">
                 Solicita tu Consultoría Gratuita
@@ -72,7 +72,7 @@ const ContactSection = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="h-12 text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20"
+                    className="h-12 text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20 rounded-xl"
                     placeholder="Tu nombre completo"
                   />
                 </div>
@@ -88,7 +88,7 @@ const ContactSection = () => {
                     required
                     value={formData.company}
                     onChange={handleChange}
-                    className="h-12 text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20"
+                    className="h-12 text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20 rounded-xl"
                     placeholder="Nombre de tu empresa"
                   />
                 </div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="h-12 text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20"
+                    className="h-12 text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20 rounded-xl"
                     placeholder="tu@empresa.com"
                   />
                 </div>
@@ -120,14 +120,14 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20 resize-none"
+                    className="text-[18px] border-separator focus:border-accent-mainBlue focus:ring-accent-mainBlue/20 resize-none rounded-xl"
                     placeholder="Cuéntanos sobre tu proyecto, desafíos actuales o qué te gustaría lograr..."
                   />
                 </div>
 
                 <Button 
                   type="submit"
-                  className="btn-primary w-full text-[20px] py-5 rounded-2xl"
+                  className="bg-gray-500 hover:bg-gray-600 text-white w-full py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Send className="mr-3 h-5 w-5" />
                   Enviar Mensaje
@@ -139,7 +139,7 @@ const ContactSection = () => {
           {/* Contact Info & Links */}
           <div className="space-y-8">
             {/* Contact Methods */}
-            <Card className="border-none shadow-xl">
+            <Card className="rounded-2xl border-none shadow-xl bg-tecnologia">
               <CardHeader className="pb-6">
                 <CardTitle className="text-[32px] text-primary-black">
                   Otras Formas de Contacto

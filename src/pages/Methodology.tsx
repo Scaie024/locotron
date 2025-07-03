@@ -178,8 +178,7 @@ const Methodology = () => {
               </p>
               <div className="flex justify-center">
                 <Button 
-                  className="btn-primary text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
-                  style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
+                  className="bg-gray-500 hover:bg-gray-600 text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
                   asChild
                 >
                   <Link to="/contacto">
@@ -412,8 +411,7 @@ const Methodology = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="btn-primary text-base px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
-                style={{ background: '#D2AA52', color: '#fff', border: 'none' }}
+                className="bg-gray-500 hover:bg-gray-600 text-white text-base px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
                 asChild
               >
                 <Link to="/contacto">

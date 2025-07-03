@@ -1,31 +1,33 @@
-name: Deploy to Netlify
+name: Implementación en Netlify
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout código
+      uses: actions/checkout@v4
 
-    - name: Setup Node
+    - name: Configurar Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 18
+        cache: 'npm'
 
-    - name: Install Dependencies
+    - name: Instalar dependencias
       run: npm ci
 
-    - name: Build Project
+    - name: Construir proyecto
       run: npm run build
 
-    - name: Deploy to Netlify
-      uses: netlify/actions/cli@master
-      with:
-        args: deploy --prod
+    - name: Implementar en Netlify
+      uses: netlify/actions/cli@v2
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      with:
+        args: deploy --dir=dist --prod
