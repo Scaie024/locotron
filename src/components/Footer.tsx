@@ -5,7 +5,7 @@ import { Building2, Workflow, Cpu } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primaryBase text-contrast py-12">
+    <footer className="bg-gray-100 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info - Removed by request */}
