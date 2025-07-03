@@ -193,3 +193,19 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## GitHub Repository
 
 https://github.com/Scaie024/nuevaLanding
+
+## Development Setup
+
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm (version 9 or higher)
+
+### Installation
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+
+### Running the Application
+- `npm run dev`: Starts the development server and opens the browser.
+
+### Building for Production
+- `npm run build`: Builds the application for production. The build artifacts will be stored in the `dist/` directory.
