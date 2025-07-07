@@ -120,23 +120,24 @@ const ServicesSection = () => {
         <ConsultingProcess steps={processSteps} />
 
         {/* Results Section */}
-        <div className="mt-16 bg-blue-50 rounded-xl p-8 border border-blue-100">
-          <h3 className="text-2xl font-bold text-center mb-8">Resultados Medibles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-blue-600">30-70%</div>
-              <p className="text-lg mt-2">Aumento en eficiencia operacional</p>
+        <div className="mt-16 bg-blue-50 rounded-2xl p-8 border border-blue-100">
+          <h3 className="text-3xl font-bold text-center mb-8">Resultados Medibles</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-4">
+              <div className="text-4xl lg:text-5xl font-bold text-blue-600">30-70%</div>
+              <p className="text-md mt-2 text-gray-600">Aumento en eficiencia operacional</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-blue-600">40%</div>
-              <p className="text-lg mt-2">Reducción en costos operativos</p>
+            <div className="text-center p-4">
+              <div className="text-4xl lg:text-5xl font-bold text-blue-600">40%</div>
+              <p className="text-md mt-2 text-gray-600">Reducción en costos operativos</p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-blue-600">9/10</div>
-              <p className="text-lg mt-2">Clientes recomiendan nuestros servicios</p>
+            <div className="text-center p-4">
+              <div className="text-4xl lg:text-5xl font-bold text-blue-600">9/10</div>
+              <p className="text-md mt-2 text-gray-600">Clientes nos recomiendan</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">proyectos desde 10 mil pesos</div>
+            <div className="text-center p-4">
+              <div className="text-4xl lg:text-5xl font-bold text-blue-600">$10k+</div>
+              <p className="text-md mt-2 text-gray-600">Proyectos (MXN)</p>
             </div>
           </div>
         </div>

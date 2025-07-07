@@ -72,21 +72,21 @@ const HeroSection = ({
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-primary-neutral via-white to-gray-200 pt-32 overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24 text-center animate-fade-in">
+      <section className="relative flex flex-col items-center justify-center bg-gradient-to-br from-primary-neutral via-white to-gray-200 pt-24 md:pt-32 overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center animate-fade-in">
           {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl text-primary-black mb-6 leading-tight font-black tracking-tight text-balance drop-shadow-xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-primary-black mb-4 leading-tight font-black tracking-tight text-balance drop-shadow-xl">
             <span className="block">Transforma tu empresa</span>
-            <span className="block" style={{ color: '#D2AA52' }}>con la metodología OPT</span>
+            <span className="block text-opt-tecnologias">con la metodología OPT</span>
           </h1>
           {/* Subtitle */}
-          <h2 className="text-lg md:text-xl lg:text-2xl text-secondary-gray mb-8 max-w-3xl mx-auto leading-tight font-bold text-balance">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-secondary-gray mb-8 max-w-3xl mx-auto leading-tight font-bold text-balance">
             Alineamos <span className="font-bold text-primary-black">Organización, Procesos y Tecnología</span> para potenciar tus resultados.
           </h2>
           {/* CTA Button */}
           <div className="flex justify-center mb-10">
             <Button 
-              className="bg-gray-500 hover:bg-gray-600 text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
+              className="bg-gray-800 hover:bg-gray-900 text-white text-base md:text-lg px-6 py-3 md:px-8 md:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
               asChild
             >
               <Link to="/contacto">

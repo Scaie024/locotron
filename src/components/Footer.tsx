@@ -4,124 +4,84 @@ import { Link } from 'react-router-dom';
 import { Building2, Workflow, Cpu } from 'lucide-react';
 
 const Footer = () => {
+  const services = {
+    organizacion: [
+      { name: 'Análisis Organizacional', path: '/servicios#organizacion' },
+      { name: 'Rediseño de Estructuras', path: '/servicios#organizacion' },
+      { name: 'Gestión del Cambio', path: '/servicios#organizacion' },
+    ],
+    procesos: [
+      { name: 'Mapeo de Procesos', path: '/servicios#procesos' },
+      { name: 'Automatización Inteligente', path: '/servicios#procesos' },
+      { name: 'Optimización de Flujos', path: '/servicios#procesos' },
+    ],
+    tecnologia: [
+      { name: 'Implementación Tecnológica', path: '/servicios#tecnologia' },
+      { name: 'Desarrollo de MVPs', path: '/servicios#tecnologia' },
+      { name: 'Integración de Sistemas', path: '/servicios#tecnologia' },
+    ],
+  };
+
   return (
-    <footer className="bg-gray-100 py-8">
+    <footer className="bg-gray-800 text-gray-300 py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Info - Removed by request */}
-          {/* Services by OPT */}
-          <div>
-            <h4 className="font-semibold text-contrast mb-4">Servicios por Metodología OPT</h4>
-            <div className="space-y-3">
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-organizacion">Organización</p>
-                <p className="text-secondary-gray hover:text-organizacion transition-colors cursor-pointer text-sm">
-                  Análisis Organizacional
-                </p>
-                <p className="text-secondary-gray hover:text-organizacion transition-colors cursor-pointer text-sm">
-                  Rediseño de Estructuras
-                </p>
-                <p className="text-secondary-gray hover:text-organizacion transition-colors cursor-pointer text-sm">
-                  Gestión del Cambio
-                </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
+          
+          {/* Services Column */}
+          <div className="sm:col-span-2">
+            <h4 className="font-semibold text-white mb-4">Servicios por Metodología</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div>
+                <h5 className="font-bold text-organizacion mb-3">Organización</h5>
+                <ul className="space-y-2">
+                  {services.organizacion.map(s => <li key={s.name}><Link to={s.path} className="hover:text-white transition-colors text-sm">{s.name}</Link></li>)}
+                </ul>
               </div>
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-procesos">Procesos</p>
-                <p className="text-secondary-gray hover:text-procesos transition-colors cursor-pointer text-sm">
-                  Mapeo de Procesos
-                </p>
-                <p className="text-secondary-gray hover:text-procesos transition-colors cursor-pointer text-sm">
-                  Automatización Inteligente
-                </p>
-                <p className="text-secondary-gray hover:text-procesos transition-colors cursor-pointer text-sm">
-                  Optimización de Flujos
-                </p>
+              <div>
+                <h5 className="font-bold text-procesos mb-3">Procesos</h5>
+                <ul className="space-y-2">
+                  {services.procesos.map(s => <li key={s.name}><Link to={s.path} className="hover:text-white transition-colors text-sm">{s.name}</Link></li>)}
+                </ul>
               </div>
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-tecnologia">Tecnología</p>
-                <p className="text-secondary-gray hover:text-tecnologia transition-colors cursor-pointer text-sm">
-                  Implementación Tecnológica
-                </p>
-                <p className="text-secondary-gray hover:text-tecnologia transition-colors cursor-pointer text-sm">
-                  Desarrollo de MVPs
-                </p>
-                <p className="text-secondary-gray hover:text-tecnologia transition-colors cursor-pointer text-sm">
-                  Integración de Sistemas
-                </p>
+              <div>
+                <h5 className="font-bold text-tecnologia mb-3">Tecnología</h5>
+                <ul className="space-y-2">
+                  {services.tecnologia.map(s => <li key={s.name}><Link to={s.path} className="hover:text-white transition-colors text-sm">{s.name}</Link></li>)}
+                </ul>
               </div>
             </div>
           </div>
 
-          {/* Company */}
+          {/* Company Column */}
           <div>
-            <h4 className="font-semibold text-contrast mb-4">Empresa</h4>
-            <div className="space-y-2">
-              <Link to="/equipo" className="block text-secondary-gray hover:text-organizacion transition-colors text-sm">
-                Nuestro Equipo OPT
-              </Link>
-              <Link to="/metodologia" className="block text-secondary-gray hover:text-organizacion transition-colors text-sm">
-                Metodología OPT
-              </Link>
-              <Link to="/stack" className="block text-secondary-gray hover:text-organizacion transition-colors text-sm">
-                Stack Tecnológico
-              </Link>
-              <Link to="/proyectos" className="block text-secondary-gray hover:text-organizacion transition-colors text-sm">
-                Casos de Éxito OPT
-              </Link>
-            </div>
+            <h4 className="font-semibold text-white mb-4">Empresa</h4>
+            <ul className="space-y-2">
+              <li><Link to="/equipo" className="hover:text-white transition-colors text-sm">Nuestro Equipo</Link></li>
+              <li><Link to="/metodologia" className="hover:text-white transition-colors text-sm">Metodología</Link></li>
+              <li><Link to="/stack" className="hover:text-white transition-colors text-sm">Stack Tecnológico</Link></li>
+              <li><Link to="/proyectos" className="hover:text-white transition-colors text-sm">Casos de Éxito</Link></li>
+            </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact Column */}
           <div>
-            <h4 className="font-semibold text-contrast mb-4">Contacto</h4>
-            <div className="space-y-2">
-              <a 
-                href="mailto:contacto@scaie.com"
-                className="block text-secondary-gray hover:text-organizacion transition-colors text-sm"
-              >
-                contacto@scaie.com
-              </a>
-              <a 
-                href="https://wa.me/5215535913417"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-secondary-gray hover:text-organizacion transition-colors text-sm"
-              >
-                WhatsApp
-              </a>
-              <a 
-                href="https://linkedin.com/company/scaie"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-secondary-gray hover:text-organizacion transition-colors text-sm"
-              >
-                LinkedIn
-              </a>
-              <a 
-                href="https://calendly.com/scaie-empresa/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-secondary-gray hover:text-organizacion transition-colors text-sm font-semibold"
-              >
-                📅 Diagnóstico OPT Gratuito
-              </a>
-            </div>
+            <h4 className="font-semibold text-white mb-4">Contacto</h4>
+            <ul className="space-y-2">
+              <li><a href="mailto:contacto@scaie.com" className="hover:text-white transition-colors text-sm">contacto@scaie.com</a></li>
+              <li><a href="https://wa.me/5215535913417" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">WhatsApp</a></li>
+              <li><a href="https://linkedin.com/company/scaie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">LinkedIn</a></li>
+              <li><a href="https://calendly.com/scaie-empresa/30min" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-blue-300 transition-colors text-sm">📅 Agendar Diagnóstico</a></li>
+            </ul>
           </div>
         </div>
 
-        <Separator className="bg-separator mb-8" />
+        <Separator className="bg-gray-700 my-8" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-secondary-gray text-legal mb-4 md:mb-0">
-            © 2025 scAIe. Metodología OPT. Todos los derechos reservados.
-          </div>
-          <div className="flex space-x-6">
-            <Link to="/privacidad" className="text-secondary-gray hover:text-organizacion transition-colors text-legal">
-              Aviso de Privacidad
-            </Link>
-            <Link to="/terminos" className="text-secondary-gray hover:text-organizacion transition-colors text-legal">
-              Términos y Condiciones
-            </Link>
+        <div className="text-center text-gray-400 text-sm">
+          <p>© {new Date().getFullYear()} scAIe. Todos los derechos reservados.</p>
+          <div className="mt-4 flex justify-center space-x-6">
+            <Link to="/privacidad" className="hover:text-white transition-colors">Aviso de Privacidad</Link>
+            <Link to="/terminos" className="hover:text-white transition-colors">Términos y Condiciones</Link>
           </div>
         </div>
       </div>

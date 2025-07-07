@@ -90,7 +90,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/*
+  We apply overflow-x: hidden to the root container instead of the body.
+  This prevents horizontal scrollbars caused by elements breaking the layout,
+  while making it easier to debug layout issues since the body itself isn't hiding the overflow.
+*/
+#root,
+.ai-platform {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure images and SVGs don't break layout */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes bottom space under images */
 }
 
 .container {
@@ -481,41 +499,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Utilities */
+
+/* Base font size adjustment for better scaling on mobile devices */
 @media (max-width: 768px) {
+  html {
+    font-size: 93.75%; /* 15px base */
+  }
+
   .btn-primary {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
     white-space: normal; /* Allow text wrapping on mobile */
     text-align: center; /* Center text on mobile */
   }
-  
+
   .card {
     margin-bottom: 1rem;
   }
-  
+
   .animate-float {
-    animation: none;
+    animation: none; /* Disable distracting animations on mobile */
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 14px;
-    line-height: 1.4;
+  html {
+    font-size: 87.5%; /* 14px base */
   }
-  
-  .container {
-    padding: 0 10px;
-  }
-  
+
   .btn-primary {
-    padding: 8px 16px;
+    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
-  
+
   .card {
-    margin: 10px 0;
-    padding: 15px;
+    margin: 0.75rem 0;
+    padding: 1rem;
   }
 }
 
