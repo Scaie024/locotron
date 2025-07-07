@@ -78,6 +78,18 @@
 }
 
 /* Base Styles */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; /* Helps contain absolutely positioned children */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   border-color: hsl(var(--border));
 }
