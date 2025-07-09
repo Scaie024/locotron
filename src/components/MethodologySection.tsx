@@ -6,6 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const accentGray = '#6B7280'; // Gris destacado
 
 const MethodologySection = () => {
+  const openWhatsApp = () => {
+    window.open(`https://wa.me/525535913417`, '_blank');
+  };
   const implementationSteps = [
     { number: 1, title: 'Diagnóstico', description: 'Análisis completo' },
     { number: 2, title: 'Estrategia', description: 'Plan de acción' },
@@ -107,7 +110,7 @@ const MethodologySection = () => {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Agenda una consultoría gratuita y descubre cómo nuestra metodología OPT puede llevar tu negocio al siguiente nivel.
           </p>
-          <Button size="lg" className="bg-gray-700 hover:bg-gray-800 text-white font-bold text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <Button size="lg" onClick={openWhatsApp} className="bg-gray-700 hover:bg-gray-800 text-white font-bold text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             Solicita tu Diagnóstico Gratuito
           </Button>
         </div>

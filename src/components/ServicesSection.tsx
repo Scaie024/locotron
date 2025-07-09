@@ -3,6 +3,10 @@ import { Briefcase, BarChart, Users, Settings, TrendingUp } from 'lucide-react';
 import ConsultingProcess from './ConsultingProcess';
 
 const ServicesSection = () => {
+  const openWhatsApp = () => {
+    window.open(`https://wa.me/525535913417`, '_blank');
+  };
+
   const processSteps = [
     {
       step: 1,
@@ -140,6 +144,16 @@ const ServicesSection = () => {
               <p className="text-md mt-2 text-gray-600">Proyectos (MXN)</p>
             </div>
           </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-12">
+          <button
+            onClick={openWhatsApp}
+            className="bg-blue-600 text-white hover:bg-blue-700 font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105"
+          >
+            Contactar para más información
+          </button>
         </div>
       </div>
     </section>
